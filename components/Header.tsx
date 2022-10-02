@@ -26,8 +26,8 @@ export default function Navbar() {
         {/* Contact Us */}
         <div className="space-x-2 items-center hidden lg:inline-flex">
           <div className="flex flex-col text-right">
-            <p className="italic">Contact Us!</p>
-            <h2 className="font-bold text-xl">+123-4567-890</h2>
+            <p className="italic tezt-sm">Contact Us!</p>
+            <h2 className="font-bold text-md">+123-4567-890</h2>
           </div>
           <IoIosCall className="w-10 h-10" />
         </div>
