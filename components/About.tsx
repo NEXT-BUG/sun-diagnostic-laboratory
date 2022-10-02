@@ -47,7 +47,7 @@ interface Props1 {
 
 const Card = ({ title, content, pic }: Props1) => {
   return (
-    <div className="flex lg:flex-row flex-col justify-center items-center space-y-5 lg:space-y-0 lg:space-x-5">
+    <div className="draw-border flex lg:flex-row flex-col justify-center items-center space-y-5 lg:space-y-0 lg:space-x-5">
       <div
         style={{
           background:
@@ -60,7 +60,7 @@ const Card = ({ title, content, pic }: Props1) => {
         {pic == "letter" && <LetterIcon />}
       </div>
 
-      <div className="flex flex-col">
+      <div className="flex flex-col space-y-1">
         <p className="text-2xl font-bold text-center lg:text-left">{title}</p>
         <p className="text-xl italic font-light text-center lg:text-left">
           {content}
