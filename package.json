@@ -6,7 +6,6 @@
     "start": "next start"
   },
   "dependencies": {
-    "antd": "^4.23.4",
     "next": "latest",
     "react": "18.1.0",
     "react-dom": "18.1.0",
