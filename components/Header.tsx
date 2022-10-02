@@ -18,12 +18,13 @@ export default function Navbar() {
         <img src="./assets/logo.svg" className="w-1/2" alt="logo" />
       </div>
       <div className="flex items-center space-x-10">
-        <div className="flex items-center space-x-2">
+        {/* Mail Id */}
+        <div className="items-center space-x-2 hidden lg:inline-flex">
           <BiMailSend className="w-10 h-10" />
           <p className="italic">info@sundiagnosticslaboratory.in</p>
         </div>
         {/* Contact Us */}
-        <div className="flex space-x-2 items-center">
+        <div className="space-x-2 items-center hidden lg:inline-flex">
           <div className="flex flex-col text-right">
             <p className="italic">Contact Us!</p>
             <h2 className="font-bold text-xl">+123-4567-890</h2>
