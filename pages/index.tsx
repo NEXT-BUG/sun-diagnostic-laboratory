@@ -1,10 +1,11 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Header from "../components/Header";
+import About from "../components/About";
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className="scroll-smooth">
       <Head>
         <title>SDL</title>
         <link rel="icon" href="/favicon.ico" />
@@ -13,6 +14,7 @@ const Home: NextPage = () => {
       <Header />
       <img src="./assets/hero-bg.svg" className="w-screen" />
       <Border />
+      <About />
     </div>
   );
 };
