@@ -1,9 +1,13 @@
 import type { NextPage } from "next";
+import React, { useState } from "react";
 import Head from "next/head";
 import Header from "../components/Header";
 import About from "../components/About";
+import Menu from "../components/Menu";
 
 const Home: NextPage = () => {
+  const [menu, setMenu] = useState(false);
+
   return (
     <div className="scroll-smooth">
       <Head>
@@ -11,7 +15,8 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header />
+      <Menu setMenu={setMenu} menu={menu} />
+      <Header setMenu={setMenu} menu={menu} />
       <img src="./assets/hero-bg.svg" className="w-screen" />
       <Border />
       <About />

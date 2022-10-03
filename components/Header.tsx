@@ -5,7 +5,12 @@ import SearchIcon from "../public/assets/search-icon.svg";
 import { IoIosCall } from "react-icons/io";
 import { BiMailSend } from "react-icons/bi";
 
-export default function Navbar() {
+interface Props {
+  setMenu: React.Dispatch<React.SetStateAction<boolean>>;
+  menu: boolean;
+}
+
+export default function Navbar({ setMenu, menu }: Props) {
   return (
     <div
       style={{
@@ -47,7 +52,10 @@ export default function Navbar() {
           <SearchIcon className="mr-4" />
         </div>
         {/* HamburgerMenu */}
-        <IconButton style={{ color: "black", padding: "1rem" }}>
+        <IconButton
+          onClick={() => setMenu(!menu)}
+          style={{ color: "black", padding: "1rem" }}
+        >
           <HamburgerIcon height={25} width={25} />
         </IconButton>
       </div>
