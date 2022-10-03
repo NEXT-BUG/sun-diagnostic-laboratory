@@ -12,7 +12,7 @@ const About = (props: Props) => {
         Sun Diagnostics Laboratory
       </h2>
       <div className="flex justify-evenly px-5 lg:pl-20">
-        <div className="flex flex-col h-screen space-y-20">
+        <div className="flex flex-col h-screen space-y-10">
           <Card
             title="Diagnostic Services"
             content="To provide quality and reliable Laboratory Service at an affordable cost."

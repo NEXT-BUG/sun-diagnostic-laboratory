@@ -4,6 +4,7 @@ import Head from "next/head";
 import Header from "../components/Header";
 import About from "../components/About";
 import Menu from "../components/Menu";
+import BestService from "../components/BestService";
 
 const Home: NextPage = () => {
   const [menu, setMenu] = useState(false);
@@ -20,6 +21,7 @@ const Home: NextPage = () => {
       <img src="./assets/hero-bg.svg" className="w-screen" />
       <Border />
       <About />
+      <BestService />
     </div>
   );
 };
