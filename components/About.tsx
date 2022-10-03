@@ -47,7 +47,7 @@ interface Props1 {
 
 const Card = ({ title, content, pic }: Props1) => {
   return (
-    <div className="draw-border flex lg:flex-row flex-col justify-center items-center space-y-5 lg:space-y-0 lg:space-x-5">
+    <div className="draw-border hover:scale-105 hover:shadow-lg md:cursor-pointer rounded-lg flex lg:flex-row flex-col justify-center items-center space-y-5 lg:space-y-0 lg:space-x-5">
       <div
         style={{
           background:
