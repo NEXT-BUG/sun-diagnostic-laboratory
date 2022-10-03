@@ -15,7 +15,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Menu setMenu={setMenu} menu={menu} />
+      <Menu menu={menu} />
       <Header setMenu={setMenu} menu={menu} />
       <img src="./assets/hero-bg.svg" className="w-screen" />
       <Border />
