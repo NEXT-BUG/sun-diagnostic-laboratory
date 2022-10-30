@@ -71,11 +71,8 @@ const Header = (props) => {
         />
       </div>
       <div className="lg:hidden py-5">
-        <IconButton>
-          <HiMenuAlt3
-            onClick={() => setMenuState(true)}
-            className="text-[#00DCC9] w-10 h-10 md:cursor-pointer"
-          />
+        <IconButton onClick={() => setMenuState(true)}>
+          <HiMenuAlt3 className="text-[#00DCC9] w-10 h-10 md:cursor-pointer" />
         </IconButton>
         <SwipeableDrawer
           anchor="left"
