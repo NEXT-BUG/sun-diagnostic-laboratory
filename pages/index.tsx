@@ -1,44 +1,86 @@
-import type { NextPage } from "next";
-import React, { useState } from "react";
-import Head from "next/head";
-import Header from "../components/Header";
-import About from "../components/About";
-import Menu from "../components/Menu";
-import BestService from "../components/BestService";
+import type { NextPage } from 'next'
+import Head from 'next/head'
+import Image from 'next/image'
 
 const Home: NextPage = () => {
-  const [menu, setMenu] = useState(false);
-
   return (
-    <div className="scroll-smooth">
+    <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
-        <title>SDL</title>
+        <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Menu menu={menu} />
-      <Header setMenu={setMenu} menu={menu} />
-      <img src="./assets/hero-bg.svg" className="w-screen" />
-      <Border />
-      <About />
-      <BestService />
-    </div>
-  );
-};
+      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+        <h1 className="text-6xl font-bold">
+          Welcome to{' '}
+          <a className="text-blue-600" href="https://nextjs.org">
+            Next.js!
+          </a>
+        </h1>
 
-const Border = () => {
-  return (
-    <div className="flex w-1/2 mx-auto my-5 lg:my-10">
-      <div
-        className="inline w-[30%] bg-[#394B57] rounded-l-lg"
-        style={{ border: "3.5px solid #394B57" }}
-      />
-      <div
-        className="inline w-[70%] bg-[#00DCC9] rounded-r-lg"
-        style={{ border: "3.5px solid #00DCC9" }}
-      />
-    </div>
-  );
-};
+        <p className="mt-3 text-2xl">
+          Get started by editing{' '}
+          <code className="rounded-md bg-gray-100 p-3 font-mono text-lg">
+            pages/index.tsx
+          </code>
+        </p>
 
-export default Home;
+        <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
+          <a
+            href="https://nextjs.org/docs"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+          >
+            <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Find in-depth information about Next.js features and its API.
+            </p>
+          </a>
+
+          <a
+            href="https://nextjs.org/learn"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+          >
+            <h3 className="text-2xl font-bold">Learn &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Learn about Next.js in an interactive course with quizzes!
+            </p>
+          </a>
+
+          <a
+            href="https://github.com/vercel/next.js/tree/canary/examples"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+          >
+            <h3 className="text-2xl font-bold">Examples &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Discover and deploy boilerplate example Next.js projects.
+            </p>
+          </a>
+
+          <a
+            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
+          >
+            <h3 className="text-2xl font-bold">Deploy &rarr;</h3>
+            <p className="mt-4 text-xl">
+              Instantly deploy your Next.js site to a public URL with Vercel.
+            </p>
+          </a>
+        </div>
+      </main>
+
+      <footer className="flex h-24 w-full items-center justify-center border-t">
+        <a
+          className="flex items-center justify-center gap-2"
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Powered by{' '}
+          <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
+        </a>
+      </footer>
+    </div>
+  )
+}
+
+export default Home
