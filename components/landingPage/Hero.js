@@ -4,7 +4,7 @@ import { SlMouse } from "react-icons/sl";
 const Hero = () => {
   return (
     <div className="h-full w-screen hero-bg">
-      <div className="w-2/3 mx-auto space-y-10 flex flex-col items-center lg:items-start">
+      <div className="pb-10 w-2/3 mx-auto space-y-10 flex flex-col items-center lg:items-start">
         <p className="text-primary text-center lg:text-left text-sm font-semibold pt-5">
           The Solar for Cure
         </p>
@@ -32,7 +32,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <SlMouse className="text-primary h-10 mt-10 pb-4 w-full hidden lg:block  animate-pulse" />
+      <SlMouse className="text-primary h-10 w-full hidden lg:block pb-4 animate-pulse" />
     </div>
   );
 };
