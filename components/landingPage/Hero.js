@@ -8,7 +8,7 @@ const Hero = () => {
         <p className="text-primary text-center lg:text-left text-sm font-semibold pt-5">
           The Solar for Cure
         </p>
-        <h1 className="text-white text-center lg:text-left text-7xl font-bold">
+        <h1 className="text-white text-center lg:text-left text-6xl md:text-7xl font-bold">
           Sun Diagnostic <br /> Laboratory
         </h1>
         <button className="border border-primary text-white py-4 px-6">
