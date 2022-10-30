@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Banner from "../components/landingPage/Banner";
 import Hero from "../components/landingPage/Hero";
 import Services from "../components/landingPage/Services";
 
@@ -11,6 +12,7 @@ const Home = () => {
       </Head>
       <Hero />
       <Services />
+      <Banner />
     </div>
   );
 };
