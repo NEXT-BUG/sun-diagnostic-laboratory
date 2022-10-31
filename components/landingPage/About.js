@@ -52,7 +52,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="text-white flex flex-col lg:flex-row items-center text-center lg:text-left space-y-5 lg:space-y-0 justify-evenly p-10">
+      <div className="text-white mt-5 flex flex-col lg:flex-row items-center text-center lg:text-left space-y-5 lg:space-y-0 justify-evenly p-10">
         <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
           <h2 className="text-xl font-bold">Who we are</h2>
           <p className="text-sm font-semibold">
