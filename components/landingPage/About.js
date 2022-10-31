@@ -1,9 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { SlMouse } from "react-icons/sl";
 
 const About = () => {
   return (
-    <div className="bg-black w-screen h-full pb-10 lg:pb-32 relative pt-10">
+    <div className="bg-black w-screen h-full relative pt-10">
       <div className="w-[80%] mx-auto space-y-5 flex flex-col items-center lg:items-start">
         <div className="flex items-center space-x-5 w-full text-center justify-center lg:justify-start">
           <div className="w-[40%] lg:w-[8%] h-1 bg-primary rounded-md" />
@@ -11,7 +12,6 @@ const About = () => {
           <div className="w-[40%] lg:hidden h-1 bg-primary rounded-md" />
         </div>
       </div>
-
       <div className="flex flex-col lg:flex-row justify-center items-center space-y-5 lg:space-y-0 lg:items-stretch lg:space-x-10 mt-20">
         <div className="card-zoom w-96 h-[35rem] lg:h-auto border-2 border-primary">
           <Image
@@ -52,6 +52,32 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="text-white flex flex-col lg:flex-row items-center text-center lg:text-left space-y-5 lg:space-y-0 justify-evenly p-10">
+        <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
+          <h2 className="text-xl font-bold">Who we are</h2>
+          <p className="text-sm font-semibold">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+        </div>
+        <div className="lg:h-20 rounded-sm bg-primary w-1" />
+        <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
+          <h2 className="text-xl font-bold">Our Vision</h2>
+          <p className="text-sm font-semibold">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+        </div>
+        <div className="rounded-sm lg:h-20 bg-primary w-1" />
+        <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
+          <h2 className="text-xl font-bold">How we work</h2>
+          <p className="text-sm font-semibold">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore.
+          </p>
+        </div>
+      </div>
+      <SlMouse className="text-primary h-10 w-full hidden lg:block pb-4 animate-pulse" />
     </div>
   );
 };
