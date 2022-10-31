@@ -32,7 +32,7 @@ const mockTestimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="bg-black w-screen h-full pb-20 lg:pb-32 relative pt-10">
+    <div className="bg-black w-screen h-full lg:h-screen pb-20 lg:pb-32 relative pt-10">
       <div className="w-[80%] mx-auto space-y-5 flex flex-col items-center lg:items-start">
         <div className="flex items-center space-x-5 w-full text-center justify-center lg:justify-start">
           <div className="w-[40%] lg:w-[8%] h-1 bg-primary rounded-md" />
@@ -42,7 +42,7 @@ const Testimonials = () => {
         <p className="text-primary text-sm font-semibold">The Solar for Cure</p>
       </div>
 
-      <div className="flex justify-center flex-wrap items-center space-y-32 lg:space-y-0 lg:space-x-6 w-2/3 mx-auto mt-10 pb-10">
+      <div className="flex justify-center flex-col lg:flex-row items-center space-y-32 lg:space-y-0 lg:space-x-6 w-2/3 mx-auto mt-32 pb-10">
         {mockTestimonials.map((testimonial, index) => (
           <Card key={index} {...testimonial} />
         ))}
