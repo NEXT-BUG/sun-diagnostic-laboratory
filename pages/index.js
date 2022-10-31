@@ -4,6 +4,7 @@ import Banner from "../components/landingPage/Banner";
 import Hero from "../components/landingPage/Hero";
 import Services from "../components/landingPage/Services";
 import Testimonials from "../components/landingPage/Testimonials";
+import News from "../components/landingPage/News";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Banner />
       <About />
       <Testimonials />
+      <News />
     </div>
   );
 };
