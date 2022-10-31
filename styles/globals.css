@@ -15,3 +15,25 @@
   background-position: center;
   background-repeat: no-repeat;
 }
+
+.text-shadow-sm {
+  text-shadow: 2px 1px #000;
+}
+
+@layer components {
+  .card-zoom {
+    @apply relative flex items-center justify-center overflow-hidden shadow-xl md:cursor-pointer;
+  }
+
+  .card-zoom-image {
+    @apply absolute w-full h-full transition-all duration-500 ease-in-out transform bg-center bg-cover;
+  }
+
+  .card-zoom-text {
+    @apply absolute text-lg bottom-0 left-5 transition-all duration-500 ease-in-out transform;
+  }
+
+  .card-zoom:hover .card-zoom-image {
+    @apply scale-125;
+  }
+}
