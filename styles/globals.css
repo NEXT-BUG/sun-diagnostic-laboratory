@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-bg {
+  background: linear-gradient(
+    180deg,
+    #00dcc9 -61.54%,
+    rgba(0, 220, 201, 0) 142.09%
+  );
+}
+
 .hero-bg {
   background-image: url("../assets/images/hero-bg.png");
   background-size: cover;
