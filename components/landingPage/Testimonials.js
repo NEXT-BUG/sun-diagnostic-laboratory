@@ -44,7 +44,7 @@ const Testimonials = () => {
 
       <div className="flex justify-center flex-wrap items-center space-y-32 lg:space-y-0 lg:space-x-6 w-2/3 mx-auto mt-10 pb-10">
         {mockTestimonials.map((testimonial, index) => (
-          <Card {...testimonial} />
+          <Card key={index} {...testimonial} />
         ))}
       </div>
     </div>
