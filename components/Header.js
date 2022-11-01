@@ -62,7 +62,7 @@ const Header = (props) => {
   if (!router.pathname) return null;
 
   return (
-    <div className="w-screen bg-black px-5 md:px-10 flex justify-between items-center lg:items-start">
+    <div className="w-screen bg-black px-5 md:px-10 flex justify-between items-center">
       <div className="bg-black">
         <Image
           src={require("../assets/images/logo.png")}

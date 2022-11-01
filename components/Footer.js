@@ -11,7 +11,7 @@ import {
 import { GoLocation } from "react-icons/go";
 const Footer = () => {
   return (
-    <div className="bg-black text-white">
+    <div className="bg-black text-white pt-10">
       <div className="text-white w-screen bg-black flex flex-col space-y-4 lg:space-y-0 text-center lg:text-left lg:flex-row justify-evenly items-center lg:items-stretch">
         <Image src={require("../assets/images/logo.png")} />
         <div className="space-y-2">
