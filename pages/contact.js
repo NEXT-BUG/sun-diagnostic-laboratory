@@ -43,20 +43,20 @@ const SendButton = styled(Button)({
 
 const Contact = () => {
   return (
-    <div className="w-screen h-screen pt-10 bg-slate-100">
+    <div className="w-screen h-full py-10 bg-slate-100">
       <Head>
         <title>SDL | Contact</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="mx-auto text-center">
+      <div className="mx-auto text-center p-5 lg:p-0">
         <div className="space-y-2">
           <h1 className="text-2xl font-extrabold">Contact US</h1>
           <p className="text-sm text-gray-500 font-semibold">
             Any question or remarks? Just write us a message!
           </p>
         </div>
-        <div className="flex w-2/3 mx-auto bg-white mt-20 p-2 rounded-lg shadow-sm">
-          <div className="bg-primary text-left w-[25rem] p-10 h-[30rem] rounded-lg flex flex-col justify-between">
+        <div className="flex flex-col md:flex-row w-full lg:w-2/3 lg:mx-auto bg-white mt-20 p-2 rounded-lg shadow-sm">
+          <div className="bg-primary w-full text-left md:w-64 lg:w-[30rem] p-10 h-96 md:h-[30rem] rounded-lg flex flex-col justify-between">
             <div className="space-y-2">
               <h1 className="text-xl font-bold">Contact Information</h1>
               <p className="text-sm font-light">
@@ -89,8 +89,8 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col space-y-6 items-center justify-center p-3 w-full">
-            <div className="flex justify-evenly w-full">
+          <div className="flex flex-col mt-5 lg:mt-0 space-y-6 items-center justify-center p-3 w-full">
+            <div className="flex justify-evenly w-full space-x-3 lg:space-x-0">
               <Input
                 style={{ color: "black", border: "black" }}
                 variant="standard"
@@ -102,7 +102,7 @@ const Contact = () => {
                 label="Last Name"
               />
             </div>
-            <div className="flex justify-evenly w-full">
+            <div className="flex justify-evenly w-full space-x-3 lg:space-x-0">
               <Input
                 style={{ color: "black", border: "black" }}
                 variant="standard"
@@ -114,7 +114,7 @@ const Contact = () => {
                 label="Phone Number"
               />
             </div>
-            <div>
+            <div className="px-5 md:px-0">
               <p className="text-sm font-bold text-left">Select Subject?</p>
               <div className="mt-1">
                 <RadioGroup row>
@@ -141,7 +141,7 @@ const Contact = () => {
                 </RadioGroup>
               </div>
             </div>
-            <div className="w-2/3">
+            <div className="w-full md:w-2/3">
               <Input fullWidth variant="standard" label="Write Your Message" />
             </div>
             <SendButton
@@ -155,7 +155,7 @@ const Contact = () => {
         </div>
       </div>
       <Image
-        className="absolute right-20 bottom-0"
+        className="absolute right-20 bottom-0 md:hidden lg:block"
         src={require("../assets/images/letter-send.png")}
       />
     </div>
