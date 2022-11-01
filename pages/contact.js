@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { MdPhoneInTalk, MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
+import toast from "react-hot-toast";
+import emailjs from "@emailjs/browser";
 import { FaDiscord } from "react-icons/fa";
 import SendIcon from "@mui/icons-material/Send";
 import { styled } from "@mui/material/styles";
@@ -42,6 +44,40 @@ const SendButton = styled(Button)({
 });
 
 const Contact = () => {
+  const [formData, setFormData] = React.useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    mobile: "",
+    message: "",
+  });
+
+  const onSend = () => {
+    const alert = toast.loading(<b>Sending Message...</b>);
+    emailjs
+      .send(
+        process.env.NEXT_PUBLIC_SERIVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
+        {
+          from_name: formData.firstName + " " + formData.lastName,
+          from_email: formData.email,
+          message: formData.message,
+          mobile: formData.mobile,
+        },
+        process.env.NEXT_PUBLIC_APIKEY
+      )
+      .then((result) =>
+        toast.success(<b>{result.text}</b>, {
+          id: alert,
+        })
+      )
+      .catch((error) =>
+        toast.dismiss(<b>{error.text}</b>, {
+          id: alert,
+        })
+      );
+  };
+
   return (
     <div className="w-screen h-full py-10 bg-slate-100">
       <Head>
@@ -89,26 +125,42 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col mt-5 lg:mt-0 space-y-6 items-center justify-center p-3 w-full">
+          <form className="flex flex-col mt-5 lg:mt-0 space-y-6 items-center justify-center p-3 w-full">
             <div className="flex justify-evenly w-full space-x-3 lg:space-x-0">
               <Input
+                onChange={(e) =>
+                  setFormData({ ...formData, firstName: e.target.value })
+                }
                 style={{ color: "black", border: "black" }}
                 variant="standard"
+                value={formData.firstName}
                 label="First Name"
               />
               <Input
+                onChange={(e) =>
+                  setFormData({ ...formData, lastName: e.target.value })
+                }
                 style={{ color: "black" }}
                 variant="standard"
+                value={formData.lastName}
                 label="Last Name"
               />
             </div>
             <div className="flex justify-evenly w-full space-x-3 lg:space-x-0">
               <Input
+                onChange={(e) =>
+                  setFormData({ ...formData, email: e.target.value })
+                }
                 style={{ color: "black", border: "black" }}
                 variant="standard"
+                value={formData.email}
                 label="Email"
               />
               <Input
+                onChange={(e) =>
+                  setFormData({ ...formData, mobile: e.target.value })
+                }
+                value={formData.mobile}
                 style={{ color: "black" }}
                 variant="standard"
                 label="Phone Number"
@@ -142,16 +194,25 @@ const Contact = () => {
               </div>
             </div>
             <div className="w-full md:w-2/3">
-              <Input fullWidth variant="standard" label="Write Your Message" />
+              <Input
+                fullWidth
+                onChange={(e) =>
+                  setFormData({ ...formData, message: e.target.value })
+                }
+                value={formData.message}
+                variant="standard"
+                label="Write Your Message"
+              />
             </div>
             <SendButton
+              onClick={onSend}
               variant="contained"
               endIcon={<SendIcon />}
               disableElevation
             >
               Send
             </SendButton>
-          </div>
+          </form>
         </div>
       </div>
       <Image

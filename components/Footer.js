@@ -16,22 +16,22 @@ const Footer = () => {
         <Image src={require("../assets/images/logo.png")} />
         <div className="space-y-2">
           <h1 className="text-xl font-bold">CONTACT US</h1>
-          <p className="flex space-x-2">
+          <div className="flex space-x-2">
             <AiOutlinePhone className="text-primary w-5 h-5" />
             <p>+91 9988776654</p>
-          </p>
-          <p className="flex space-x-2">
+          </div>
+          <div className="flex space-x-2">
             <AiOutlineMail className="text-primary w-5 h-5" />
             <p>email@gmail.com</p>
-          </p>
-          <p className="flex space-x-2">
+          </div>
+          <div className="flex space-x-2">
             <GoLocation className="text-primary w-5 h-5" />
             <p>Location</p>
-          </p>
-          <p className="flex space-x-2">
+          </div>
+          <div className="flex space-x-2">
             <AiOutlineCalendar className="text-primary w-5 h-5" />
             <p>Sunday to Friday</p>
-          </p>
+          </div>
         </div>
         <div className="space-y-2 hidden md:block">
           <h1 className="text-xl font-bold">OUR SERVICES</h1>
