@@ -5,6 +5,7 @@ import Hero from "../components/landingPage/Hero";
 import Services from "../components/landingPage/Services";
 import Testimonials from "../components/landingPage/Testimonials";
 import News from "../components/landingPage/News";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <About />
       <Testimonials />
       <News />
+      <Footer />
     </div>
   );
 };

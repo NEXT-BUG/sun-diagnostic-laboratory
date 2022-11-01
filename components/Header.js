@@ -42,7 +42,7 @@ const routes = [
     icons: <InfoIcon />,
   },
   {
-    path: "/blog",
+    path: "/blogs",
     name: "Blog",
     icons: <BookIcon />,
   },
