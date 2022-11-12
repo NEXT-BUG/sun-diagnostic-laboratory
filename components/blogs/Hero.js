@@ -3,13 +3,13 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="hero-bg h-[30rem] w-screen hidden lg:block">
-      <div className="relative h-full w-fit mx-auto">
+    <div className="hero-bg h-[30rem] w-screen hidden lg:block lg:mb-64">
+      <div className="relative px-20 py-10 h-full w-fit mx-auto">
         <Image
           src={require("../../assets/images/blogs-hero.png")}
           className="rounded-sm"
         />
-        <h1 className="absolute top-20 text-shadow-sm left-20 text-7xl italic font-bold text-white">
+        <h1 className="absolute top-20 text-shadow-sm left-32 text-7xl italic font-bold text-white">
           Blogs
         </h1>
       </div>
