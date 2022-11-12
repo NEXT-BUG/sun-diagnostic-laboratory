@@ -29,7 +29,7 @@ const Blogs = () => {
           Let's chat
         </button>
       </div>
-      <div className="flex gap-10 flex-wrap justify-evenly my-10 px-10">
+      <div className="flex gap-10 flex-wrap justify-evenly my-10 px-20">
         {blogs?.map((blog, index) => (
           <BlogCards {...blog} key={index} />
         ))}
