@@ -7,9 +7,9 @@ const Hero = () => {
       <div className="relative px-20 py-10 h-full w-fit mx-auto">
         <Image
           src={require("../../assets/images/blogs-hero.png")}
-          className="rounded-sm"
+          className="rounded-lg shadow-md"
         />
-        <h1 className="absolute top-20 text-shadow-sm left-32 text-7xl italic font-bold text-white">
+        <h1 className="absolute top-20 text-shadow-sm left-32 text-7xl italic font-bold text-[#394B57]">
           Blogs
         </h1>
       </div>

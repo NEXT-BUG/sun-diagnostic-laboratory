@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         primary: "#00DCC9",
       },
+      fontFamily: {
+        ubuntu: ["Ubuntu", "sans-serif"],
+      },
     },
   },
   plugins: [],
