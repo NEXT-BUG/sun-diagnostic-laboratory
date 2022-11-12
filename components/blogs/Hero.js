@@ -9,7 +9,7 @@ const Hero = () => {
           src={require("../../assets/images/blogs-hero.png")}
           className="rounded-lg shadow-md"
         />
-        <h1 className="absolute top-20 text-shadow-sm left-32 text-7xl italic font-bold text-[#394B57]">
+        <h1 className="absolute font-serif top-20  left-32 text-7xl italic font-bold text-[#394B57]">
           Blogs
         </h1>
       </div>
