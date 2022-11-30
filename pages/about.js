@@ -1,39 +1,33 @@
 import Head from "next/head";
-import Image from "next/image";
+
 import React from "react";
+import Hero from "../components/about/Hero";
 
 const About = () => {
   return (
-    <div className="w-screen h-screen pt-32">
+    <div className="w-screen min-h-screen">
       <Head>
         <title>SDL | About us</title>
       </Head>
-
-      <div className="flex flex-col lg:flex-row text-center lg:text-left items-center w-2/3 mx-auto space-x-10 space-between">
-        <Image src={require("../assets/images/hero-img-2.png")} />
-        <div className="flex flex-col lg:w-2/3 space-y-5">
-          <h1 className="font-bold text-4xl font-ubuntu">
-            Sun Diagnostics Laboratory
-          </h1>
-          <p className="font-ubuntu">
-            You can take most things for granted in life and get away with it.
-            Your health is not one of them. We often tend to forget the brevity
-            of life, due to the myriad distractions that surround us in the
-            modern world. This is a reality
-          </p>
-          <div className="flex space-x-4">
-            <button className="md:hover:scale-105 md:hover:bg-slate-100 duration-300 ease-out font-semibold px-8 bg-[#F4F4F4] py-3 rounded-full border">
-              Services
-            </button>
-            <button className="md:hover:scale-105 md:hover:bg-slate-100 duration-300 ease-out font-semibold px-8 bg-[#F4F4F4] py-3 rounded-full border">
-              Facilities
-            </button>
+      <Hero />
+      <div className="w-screen -z-10 bg-primary relative">
+        <div className="absolute -z-10 h-[50%] w-screen bg-[#F4F4F4]" />
+        <div className="p-14 z-50">
+          <div className="bg-white p-10 rounded-md shadow-2xl font-ubuntu">
+            <p className="font-sm text-gray-500 ">Who we are</p>
+            <h1 className="text-4xl font-bold">About us</h1>
+            <p className="mt-5 text-xl">
+              We understand this deeply, which is why we put the patient at the
+              centre of our efforts. Precise, Accurate diagnosis means
+              potentially helping mitigating catastrophe in the patient's lives
+              and giving them more time to spend in the company of their loved
+              ones. Our commitment to Excellence and Quality translates to the
+              fact that, if we do our job well every single time, we would be
+              achieving this valuable and worthwhile end which is worth all the
+              struggle. We do not view ourselves as 'just another cog' in a
+              large and chaotic machine of healthcare in the country.
+            </p>
           </div>
-          <div className="h-[0.1rem] w-full bg-primary rounded-full" />
-          <p className="text-md font-ubuntu">
-            Have any questions? <br /> Contact us!
-          </p>
-          <p className="font-bold text-xl">+9967438493</p>
         </div>
       </div>
     </div>
