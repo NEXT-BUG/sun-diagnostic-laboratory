@@ -15,7 +15,7 @@ const LatestBlog = () => {
           good and bad times.
         </p>
       </div>
-      <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 items-center justify-evenly">
+      <div className="flex flex-col mb-10 lg:flex-row space-y-5 lg:space-y-0 items-center justify-evenly">
         {blogs?.map((blog, index) => {
           if (index < 3) return <BlogCard {...blog} />;
         })}

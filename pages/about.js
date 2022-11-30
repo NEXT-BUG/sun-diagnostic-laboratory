@@ -41,6 +41,30 @@ const About = () => {
       </div>
       <Importance />
       <LatestBlog />
+      <div className="relative h-fit w-screen">
+        <Image
+          src={require("../assets/images/about-us-img-2.png")}
+          className="relative h-96 lg:h-fit w-screen"
+        />
+        <div className="absolute font-ubuntu z-40 h-full top-0 w-full items-center flex">
+          <div className="flex flex-col lg:flex-row items-center space-y-5 lg:space-y-0 lg:items-stretch justify-evenly w-full">
+            <div className="justify-center items-center space-y-3 flex flex-col w-96 shadow-2xl rounded-sm animate-bounce bg-white p-7">
+              <p className="text-4xl text-center font-bold">Vision</p>
+              <p className="text-xs text-center">
+                To be the nation's most trusted medical diagnostic brand
+              </p>
+            </div>
+            <div className="justify-center items-center space-y-3 flex flex-col w-96 shadow-2xl rounded-sm animate-bounce bg-white p-7">
+              <p className="text-4xl text-center font-bold">Mission</p>
+              <p className="text-xs text-center">
+                To become the nation's most trustworthy medical diagnostic brand
+                by 2025, that is known among patients to hold the highest
+                principles of medical ethics
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
