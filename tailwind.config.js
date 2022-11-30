@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         primary: "#00DCC9",
+        secondary: "#394B57",
       },
       fontFamily: {
         ubuntu: ["Ubuntu", "sans-serif"],
