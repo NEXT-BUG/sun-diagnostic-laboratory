@@ -3,7 +3,7 @@ import React from "react";
 import { SlMouse } from "react-icons/sl";
 const Hero = () => {
   return (
-    <div className="h-full w-screen hero-bg">
+    <div className="h-full w-screen hero-bg bg-black">
       <div className="pb-10 w-2/3 mx-auto space-y-10 flex flex-col items-center lg:items-start">
         <p className="text-primary text-center lg:text-left text-sm font-semibold pt-5">
           The Solar for Cure
