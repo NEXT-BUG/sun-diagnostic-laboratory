@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-
+import LatestBlog from "../components/about/LatestBlog";
 import React from "react";
 import Hero from "../components/about/Hero";
 import Importance from "../components/about/Importance";
@@ -40,6 +40,7 @@ const About = () => {
         </div>
       </div>
       <Importance />
+      <LatestBlog />
     </div>
   );
 };
