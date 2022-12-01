@@ -19,7 +19,7 @@ const About = () => {
             <div className="my-5">
               <p className="font-sm text-gray-500 ">Who we are</p>
               <h1 className="text-4xl font-bold">About us</h1>
-              <p className="mt-5 text-xl">
+              <p className="mt-5 text-sm md:text-md lg:text-xl">
                 We understand this deeply, which is why we put the patient at
                 the centre of our efforts. Precise, Accurate diagnosis means
                 potentially helping mitigating catastrophe in the patient's
@@ -48,13 +48,13 @@ const About = () => {
         />
         <div className="absolute font-ubuntu z-40 h-full top-0 w-full items-center flex">
           <div className="flex flex-col lg:flex-row items-center space-y-5 lg:space-y-0 lg:items-stretch justify-evenly w-full">
-            <div className="justify-center items-center space-y-3 flex flex-col w-96 shadow-2xl rounded-sm animate-bounce bg-white p-7">
+            <div className="justify-center items-center space-y-3 flex flex-col w-80 lg:w-96 shadow-2xl rounded-sm bg-white p-7">
               <p className="text-4xl text-center font-bold">Vision</p>
               <p className="text-xs text-center">
                 To be the nation's most trusted medical diagnostic brand
               </p>
             </div>
-            <div className="justify-center items-center space-y-3 flex flex-col w-96 shadow-2xl rounded-sm animate-bounce bg-white p-7">
+            <div className="justify-center items-center space-y-3 flex flex-col w-80 lg:w-96 shadow-2xl rounded-sm bg-white p-7">
               <p className="text-4xl text-center font-bold">Mission</p>
               <p className="text-xs text-center">
                 To become the nation's most trustworthy medical diagnostic brand

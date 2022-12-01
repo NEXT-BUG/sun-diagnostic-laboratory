@@ -5,7 +5,7 @@ import { blogs } from "../../mock/blogs";
 const LatestBlog = () => {
   return (
     <div className="w-screen min-h-screen font-ubuntu">
-      <div className="p-20 text-center space-y-5">
+      <div className="p-10 lg:p-20 text-center space-y-5">
         <h1 className="text-secondary font-bold text-4xl">
           Our latest blog posts
         </h1>
@@ -15,9 +15,9 @@ const LatestBlog = () => {
           good and bad times.
         </p>
       </div>
-      <div className="flex flex-col mb-10 lg:flex-row space-y-5 lg:space-y-0 items-center justify-evenly">
+      <div className="flex flex-col p-5 mb-10 lg:flex-row space-y-5 lg:space-y-0 items-center justify-evenly">
         {blogs?.map((blog, index) => {
-          if (index < 3) return <BlogCard {...blog} />;
+          if (index < 3) return <BlogCard key={index} {...blog} />;
         })}
       </div>
     </div>
@@ -28,7 +28,7 @@ export default LatestBlog;
 
 const BlogCard = ({ image, title, desc }) => {
   return (
-    <div className="p-2 bg-white shadow-lg w-96 rounded-md">
+    <div className="p-2 bg-white shadow-lg w-80 md:w-96 rounded-md">
       <Image className="object-fit object-center h-64 rounded-sm" src={image} />
       <div className="p-5">
         <h1 className="font-bold text-xl">{title}</h1>
