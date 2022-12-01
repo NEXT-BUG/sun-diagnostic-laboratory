@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="text-white text-center lg:text-left text-5xl md:text-7xl font-bold">
           Sun Diagnostic <br /> Laboratory
         </h1>
-        <p className="text-white text-xl w-2/3 font-light font-ubuntu">
+        <p className="text-white text-xl text-center lg:text-left lg:w-2/3 font-light font-ubuntu">
           You can take most things for granted in life and get away with it.
           Your health is not one of them. We often tend to forget the brevity of
           life, due to the myriad distractions that surround us in the modern

@@ -13,7 +13,7 @@ const Footer = () => {
   return (
     <div className="bg-black text-white pt-10">
       <div className="text-white w-screen bg-black flex flex-col space-y-4 lg:space-y-0 text-center lg:text-left lg:flex-row justify-evenly items-center lg:items-stretch">
-        <Image src={require("../assets/images/logo.png")} />
+        <Image src={require("../assets/images/logo.png")} alt="logo" />
         <div className="space-y-2">
           <h1 className="text-xl font-bold">CONTACT US</h1>
           <div className="flex space-x-2">

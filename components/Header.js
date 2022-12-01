@@ -67,7 +67,7 @@ const Header = (props) => {
         <Image
           src={require("../assets/images/logo.png")}
           loading="lazy"
-          alt=""
+          alt="logo"
         />
       </div>
       <div className="lg:hidden py-5">
