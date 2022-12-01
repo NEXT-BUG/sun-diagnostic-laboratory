@@ -25,7 +25,7 @@ export default BestService;
 
 const ServiceCard = ({ title, desc, image }) => {
   return (
-    <div className="group md:w-1/3 md:cursor-pointer md:hover:bg-primary md:hover:scale-110 duration-150 ease-out bg-slate-300 rounded-md">
+    <div className="group md:w-1/3 font-ubuntu md:cursor-pointer md:hover:bg-primary md:hover:scale-110 duration-150 ease-out bg-slate-300 rounded-md">
       <div className="p-5">
         <h1 className="font-bold text-xl">{title}</h1>
         <p className="text-sm font-light">{desc}</p>
@@ -33,7 +33,7 @@ const ServiceCard = ({ title, desc, image }) => {
       <div className="flex items-start justify-between relative w-full h-full">
         <p className="invisible">Hello</p>
         <Image
-          className="md:group-hover:opacity-100 relative bottom-0 opacity-40 right-0"
+          className="md:group-hover:opacity-100 h-64 relative bottom-0 opacity-40 right-0"
           src={image}
         />
       </div>
