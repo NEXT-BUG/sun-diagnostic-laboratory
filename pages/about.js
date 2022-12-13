@@ -50,17 +50,20 @@ const About = () => {
           <div className="flex flex-col lg:flex-row items-center space-y-5 lg:space-y-0 lg:items-stretch justify-evenly w-full">
             <div className="justify-center items-center space-y-3 flex flex-col w-80 lg:w-96 shadow-2xl rounded-sm bg-white p-7">
               <p className="text-4xl text-center font-bold">Vision</p>
-              <p className="text-xs text-center">
-                To be the nation's most trusted medical diagnostic brand
-              </p>
+              <div className="text-xs text-center flex flex-col items-start">
+                <p>» We inspire to "Live Healthy”</p>
+                <p>» We deliver a “WOW” experience</p>
+                <p>» Precision and care is our way of center</p>
+              </div>
             </div>
             <div className="justify-center items-center space-y-3 flex flex-col w-80 lg:w-96 shadow-2xl rounded-sm bg-white p-7">
               <p className="text-4xl text-center font-bold">Mission</p>
-              <p className="text-xs text-center">
-                To become the nation's most trustworthy medical diagnostic brand
-                by 2025, that is known among patients to hold the highest
-                principles of medical ethics
-              </p>
+              <div className="text-xs text-center flex flex-col items-start">
+                <p>» ANEMIA ASSESSMENT PROFILE</p>
+                <p>» ANTI MUSK ANTIBODY(MYASTHERIA GRAVIS)</p>
+                <p>» ANTI SS-B(ANTI LA)ANTIBODY</p>
+                <p>» ANTI SSA(ANTI RO)ANTIBODY</p>
+              </div>
             </div>
           </div>
         </div>
