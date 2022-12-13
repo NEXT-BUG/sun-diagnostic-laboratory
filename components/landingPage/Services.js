@@ -3,14 +3,14 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="bg-black w-screen h-full pb-10 lg:pb-32 relative pt-10">
+    <div className="bg-gradient-to-b from-primary to-black w-screen h-full pb-10 lg:pb-32 relative pt-10">
       <div className="w-[80%] mx-auto space-y-5 flex flex-col items-center lg:items-start">
         <div className="flex items-center space-x-5 w-full text-center justify-center lg:justify-start">
-          <div className="w-[40%] lg:w-[8%] h-1 bg-primary rounded-md" />
+          <div className="w-[40%] lg:w-[8%] h-1 bg-black rounded-md" />
           <p className="text-white font-bold text-2xl">Services</p>
-          <div className="w-[40%] lg:hidden h-1 bg-primary rounded-md" />
+          <div className="w-[40%] lg:hidden h-1 bg-black rounded-md" />
         </div>
-        <p className="text-primary text-sm font-semibold">
+        <p className="text-white text-sm font-semibold">
           Provides Our Best Service
         </p>
 

@@ -4,12 +4,12 @@ import { SlMouse } from "react-icons/sl";
 
 const About = () => {
   return (
-    <div className="bg-black w-screen h-full relative pt-10">
+    <div className="bg-gradient-to-b from-primary to-black w-screen h-full relative pt-10">
       <div className="w-[80%] mx-auto space-y-5 flex flex-col items-center lg:items-start">
         <div className="flex items-center space-x-5 w-full text-center justify-center lg:justify-start">
-          <div className="w-[40%] lg:w-[8%] h-1 bg-primary rounded-md" />
+          <div className="w-[40%] lg:w-[8%] h-1 bg-black rounded-md" />
           <p className="text-white font-bold text-2xl">About us</p>
-          <div className="w-[40%] lg:hidden h-1 bg-primary rounded-md" />
+          <div className="w-[40%] lg:hidden h-1 bg-black rounded-md" />
         </div>
       </div>
       <div className="flex flex-col lg:flex-row justify-center items-center space-y-5 lg:space-y-0 lg:items-stretch lg:space-x-10 mt-20">

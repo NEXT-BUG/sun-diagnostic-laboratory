@@ -66,6 +66,7 @@ const Header = (props) => {
       <div className="bg-black">
         <Image
           src={require("../assets/images/logo.png")}
+          className="w-64"
           loading="lazy"
           alt="logo"
         />

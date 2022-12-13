@@ -6,26 +6,26 @@ import "swiper/css";
 const mockTestimonials = [
   {
     quote:
-      "Ex do excepteur cillum ullamco anim.Et anim Lorem nostrud ipsum.Minim ad sunt elit magna dolore aute non mollit magna elit proident.",
+      "Good Service and Laboratory, Proper Response from staffs, overall recommended",
     star: 5,
     avatar: "https://bit.ly/3fmmc8h",
-    name: "Name",
+    name: "Bala",
     designation: "Designation",
   },
   {
     quote:
-      "Incididunt veniam sunt veniam occaecat culpa ea commodo id proident ea dolor quis ut irure.Et deserunt ullamco do est qui et pariatur aliqua labore.Duis laborum et minim ex tempor Lorem ex nisi pariatur sit est.",
+      "Very Good Diagnostic Center with friendly staffs, adn very good atmosphere. Thanks to Sun Diagnostics Laboratory Nellore",
     star: 5,
     avatar: "https://bit.ly/3fmmc8h",
-    name: "Name",
+    name: "Vignesh Dev",
     designation: "Designation",
   },
   {
     quote:
-      "Aliquip non culpa consectetur irure officia.Sint minim aliquip elit ad culpa in sunt proident adipisicing tempor dolor.Aute ut ullamco consequat ad excepteur minim aute reprehenderit.",
+      "Cost is Low, Good Staffs, Done Pregrancy Test for my wife (Nearly 6 tests - 1850 and will get 10% discount), also I am satisfied, The same test cose Rs.2500 from other diagnostic center.",
     star: 5,
     avatar: "https://bit.ly/3fmmc8h",
-    name: "Name",
+    name: "Vanitha",
     designation: "Designation",
   },
 ];

@@ -5,11 +5,8 @@ const Hero = () => {
   return (
     <div className="h-full w-screen hero-bg bg-black">
       <div className="pb-10 w-2/3 mx-auto space-y-10 flex flex-col items-center lg:items-start">
-        <p className="text-primary text-center lg:text-left text-sm font-semibold pt-5">
-          The Solar for Cure
-        </p>
-        <h1 className="text-white text-center lg:text-left text-6xl md:text-7xl font-bold">
-          Sun Diagnostic <br /> Laboratory
+        <h1 className="mt-5 text-white text-center lg:text-left text-6xl md:text-5xl font-bold">
+          Fully Automated <br /> Laboratory
         </h1>
         <button className="border border-primary text-white py-4 px-6">
           View More
