@@ -10,6 +10,7 @@ import InfoIcon from "@mui/icons-material/Info";
 import BiotechIcon from "@mui/icons-material/Biotech";
 import BookIcon from "@mui/icons-material/Book";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
+import ListAltIcon from "@mui/icons-material/ListAlt";
 import {
   IconButton,
   List,
@@ -37,6 +38,11 @@ const routes = [
     icons: <BiotechIcon />,
   },
   {
+    path: "/profiles",
+    name: "Profiles",
+    icons: <ListAltIcon />,
+  },
+  {
     path: "/about",
     name: "About US",
     icons: <InfoIcon />,
@@ -62,7 +68,7 @@ const Header = (props) => {
   if (!router.pathname) return null;
 
   return (
-    <div className="w-screen bg-black px-5 md:px-10 flex justify-between items-center">
+    <div className="w-screen z-50 bg-black px-5 md:px-10 flex justify-between items-center">
       <div className="bg-black">
         <Image
           src={require("../assets/images/logo.png")}

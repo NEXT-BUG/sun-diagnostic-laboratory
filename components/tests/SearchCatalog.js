@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React from "react";
+import { AiOutlineSearch } from "react-icons/ai";
 
 const alphabets = [
   "A",
@@ -35,33 +36,34 @@ const SearchCatalog = ({ shadow, border, className }) => {
   const router = useRouter();
   return (
     <div
-      className={`md:sticky top-10 bg-white text-black mx-10 rounded-md ${
+      className={`md:sticky top-20 my-10 bg-white border text-black ml-20 rounded-md ${
         shadow && "shadow-2xl"
-      } ${border && "border border-black"} p-5 ${className}`}
+      } ${border && "border border-black"} p-10 ${className}`}
     >
-      <h1 className="font-bold text-xl mb-5 text-center md:text-left">
+      <div className="border-primary rounded-sm flex items-center border px-3 mb-5 py-2">
+        <input
+          placeholder="Search"
+          type="text"
+          className="outline-none w-full mx-2 font-bold"
+        />
+        <button className="md:hover:scale-105 ease-out duration-100 md:active:scale-75">
+          <AiOutlineSearch />
+        </button>
+      </div>
+      <h1 className="font-bold text-2xl mb-5 text-center md:text-left">
         Test Catalog
       </h1>
-      <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+      <div className="flex flex-wrap items-center gap-3 justify-center md:justify-start">
         {alphabets?.map((item) => {
           return (
-            <p
+            <div
               onClick={() => router.push("/tests?search=" + item)}
               className="catalog-letter"
             >
               {item}
-            </p>
+            </div>
           );
         })}
-      </div>
-      <div className="flex flex-col justify-center gap-5 my-10">
-        <p className="catalog-services">Services</p>
-        <p className="catalog-services">Profile</p>
-        <p className="catalog-services">About Us</p>
-        <p className="catalog-services">Blog</p>
-        <p className="catalog-services">Contact Us</p>
-        <p className="catalog-services">Health Packages</p>
-        <p className="catalog-services">Make an Appointment</p>
       </div>
     </div>
   );

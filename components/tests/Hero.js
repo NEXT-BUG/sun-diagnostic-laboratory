@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="w-screen min-h-screen flex flex-col justify-center items-center">
+    <div className="w-screen h-full flex flex-col py-32">
       <div className="flex space-y-10 md:space-y-0 w-2/3 mx-auto flex-col-reverse py-20 md:py-0 md:flex-row items-center justify-between md:space-x-10">
         <div className="space-y-10 text-center md:text-left">
           <p className="text-primary font-bold">The Solar For Cure</p>

@@ -55,6 +55,6 @@
   }
 
   .test-name {
-    @apply text-sm font-bold text-center w-full md:w-2/3 md:cursor-pointer md:hover:bg-gray-200 md:active:scale-95 duration-100 ease-out mx-auto bg-white text-black py-3 rounded-sm;
+    @apply text-sm border border-primary shadow-xl font-bold text-left w-full md:w-2/3 md:cursor-pointer  mx-auto bg-white text-black py-3 px-2 rounded-sm;
   }
 }
