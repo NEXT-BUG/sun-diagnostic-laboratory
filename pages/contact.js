@@ -6,42 +6,10 @@ import toast from "react-hot-toast";
 import emailjs from "@emailjs/browser";
 import { FaDiscord } from "react-icons/fa";
 import SendIcon from "@mui/icons-material/Send";
-import { styled } from "@mui/material/styles";
-import {
-  Button,
-  FormControlLabel,
-  Radio,
-  RadioGroup,
-  TextField,
-} from "@mui/material";
+import { FormControlLabel, RadioGroup } from "@mui/material";
 import Head from "next/head";
 import Image from "next/image";
-
-const Input = styled(TextField)({
-  "& label.Mui-focused": {
-    color: "black",
-  },
-  "&.Mui-focused fieldset": {
-    borderColor: "black",
-  },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: "black",
-  },
-});
-
-const RadioStyle = styled(Radio)({
-  "&.Mui-checked": {
-    color: "black",
-  },
-});
-
-const SendButton = styled(Button)({
-  "&.MuiButton-contained": {
-    backgroundColor: "#00DCC9",
-    color: "white",
-    fontWeight: "700",
-  },
-});
+import { Input, RadioStyle, SendButton } from "../components/styledMUI";
 
 const Contact = () => {
   const [formData, setFormData] = React.useState({

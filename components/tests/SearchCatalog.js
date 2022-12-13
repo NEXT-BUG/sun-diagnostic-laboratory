@@ -1,6 +1,38 @@
+import { useRouter } from "next/router";
 import React from "react";
 
+const alphabets = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z",
+  "ALL",
+];
+
 const SearchCatalog = ({ shadow, border, className }) => {
+  const router = useRouter();
   return (
     <div
       className={`md:sticky top-10 bg-white text-black mx-10 rounded-md ${
@@ -11,32 +43,16 @@ const SearchCatalog = ({ shadow, border, className }) => {
         Test Catalog
       </h1>
       <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-        <p className="catalog-letter">A</p>
-        <p className="catalog-letter">B</p>
-        <p className="catalog-letter">C</p>
-        <p className="catalog-letter">D</p>
-        <p className="catalog-letter">E</p>
-        <p className="catalog-letter">F</p>
-        <p className="catalog-letter">G</p>
-        <p className="catalog-letter">H</p>
-        <p className="catalog-letter">I</p>
-        <p className="catalog-letter">J</p>
-        <p className="catalog-letter">K</p>
-        <p className="catalog-letter">L</p>
-        <p className="catalog-letter">M</p>
-        <p className="catalog-letter">N</p>
-        <p className="catalog-letter">O</p>
-        <p className="catalog-letter">P</p>
-        <p className="catalog-letter">Q</p>
-        <p className="catalog-letter">R</p>
-        <p className="catalog-letter">S</p>
-        <p className="catalog-letter">T</p>
-        <p className="catalog-letter">U</p>
-        <p className="catalog-letter">V</p>
-        <p className="catalog-letter">W</p>
-        <p className="catalog-letter">X</p>
-        <p className="catalog-letter">Y</p>
-        <p className="catalog-letter">Z</p>
+        {alphabets?.map((item) => {
+          return (
+            <p
+              onClick={() => router.push("/tests?search=" + item)}
+              className="catalog-letter"
+            >
+              {item}
+            </p>
+          );
+        })}
       </div>
       <div className="flex flex-col justify-center gap-5 my-10">
         <p className="catalog-services">Services</p>
