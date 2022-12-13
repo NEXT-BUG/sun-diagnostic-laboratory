@@ -45,4 +45,16 @@
   .card-zoom:hover .card-zoom-image {
     @apply scale-125;
   }
+
+  .catalog-letter {
+    @apply text-sm font-bold px-3 py-2 bg-primary rounded-sm md:hover:scale-105 ease-out duration-150 md:active:scale-75 md:hover:text-white md:cursor-pointer md:hover:bg-[#005750];
+  }
+
+  .catalog-services {
+    @apply font-bold text-sm md:cursor-pointer md:active:scale-75 duration-200 text-center py-3 px-20 bg-[#394B57] rounded-full text-white;
+  }
+
+  .test-name {
+    @apply text-sm font-bold text-center w-full md:w-2/3 md:cursor-pointer md:hover:bg-gray-200 md:active:scale-95 duration-100 ease-out mx-auto bg-white text-black py-3 rounded-sm;
+  }
 }
