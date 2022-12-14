@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
-import { data } from "../../mock/tests";
+import { data } from "../../mock/profiles";
 import SearchCatalog from "./SearchCatalog";
 
 const Catalog = ({ catalogRef, searchQuery }) => {
@@ -13,7 +13,7 @@ const Catalog = ({ catalogRef, searchQuery }) => {
     }
     setFilteredData(
       data.filter((word) => {
-        return word?.testName[0] === searchQuery;
+        return word?.profileName[0] === searchQuery;
       })
     );
   }, [searchQuery]);
@@ -27,10 +27,10 @@ const Catalog = ({ catalogRef, searchQuery }) => {
 
   return (
     <div className="min-h-screen relative w-screen text-white">
-      <div className="absolute bg-gradient-to-b from-primary to-black w-screen min-h-screen" />
+      <div className="absolute bg-gradient-to-b from-primary to-black w-screen h-full" />
       <div className="w-2/3 mx-auto relative mb-32 top-20 bg-white h-1 rounded-lg" />
-      <div className="flex flex-col md:flex-row md:items-start justify-center">
-        <SearchCatalog shadow className="md:w-1/4" />
+      <div className="flex flex-col md:flex-row md:items-start">
+        <SearchCatalog shadow className="w-screen md:w-1/4" />
         <div
           ref={catalogRef}
           className="md:ml-auto w-2/3 mx-auto py-10 md:mr-10 relative"
@@ -38,15 +38,17 @@ const Catalog = ({ catalogRef, searchQuery }) => {
           <div className="flex flex-col h-[30rem] overflow-y-auto gap-5">
             {searchQuery ? (
               filteredData?.length != 0 ? (
-                filteredData?.map((item) => {
+                filteredData?.map((item, index) => {
                   return (
-                    <div className="test-name space-y-4 p-5">
-                      <p>{item.testName}</p>
+                    <div
+                      key={index}
+                      onClick={() => router.push(`/book/${item.profileId}`)}
+                      className="test-name p-5"
+                    >
+                      <p>{item.profileName}</p>
+                      <p className="text-sm mt-1 text-gray-400">{item.desc}</p>
 
-                      <button
-                        onClick={() => router.push(`/book/${item.testId}`)}
-                        className="px-4 py-2 rounded-sm text-white md:hover:bg-[#005751] md:hover:scale-105 md:active:scale-75 ease-out duration-150 bg-primary"
-                      >
+                      <button className="mt-3 px-4 py-2 rounded-sm text-white md:hover:bg-[#005751] md:hover:scale-105 md:active:scale-75 ease-out duration-150 bg-primary ">
                         Book Now
                       </button>
                     </div>
@@ -60,14 +62,15 @@ const Catalog = ({ catalogRef, searchQuery }) => {
                 </div>
               )
             ) : (
-              data?.map((item) => {
+              data?.map((item, index) => {
                 return (
-                  <div className="test-name space-y-4 p-5">
-                    <p>{item.testName}</p>
-                    <button
-                      onClick={() => router.push(`/book/${item.testId}`)}
-                      className="px-4 py-2 rounded-sm text-white md:hover:bg-[#005751] md:hover:scale-105 md:active:scale-75 ease-out duration-150 bg-primary"
-                    >
+                  <div
+                    key={index}
+                    onClick={() => router.push(`/book/${item.profileId}`)}
+                    className="test-name space-y-4 p-5"
+                  >
+                    <p>{item.profileName}</p>
+                    <button className="px-4 py-2 rounded-sm text-white md:hover:bg-[#005751] md:hover:scale-105 md:active:scale-75 ease-out duration-150 bg-primary">
                       Book Now
                     </button>
                   </div>

@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import React, { useRef } from "react";
 import { useEffect } from "react";
-import Catalog from "../components/tests/Catalog";
+import Catalog from "../components/profiles/Catalog";
 import Hero from "../components/tests/Hero";
 
 const Profiles = () => {
@@ -21,7 +21,7 @@ const Profiles = () => {
     <div className="min-h-screen w-screen">
       <Hero />
 
-      <Catalog searchQuery={searchQuery} catalogRef={catalogRef} profile />
+      <Catalog searchQuery={searchQuery} catalogRef={catalogRef} />
     </div>
   );
 };
