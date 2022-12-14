@@ -1,13 +1,11 @@
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import { data } from "../../mock/tests";
-import { data as profileData } from "../../mock/profiles";
 import SearchCatalog from "./SearchCatalog";
 
-const Catalog = ({ catalogRef, searchQuery, profile }) => {
+const Catalog = ({ catalogRef, searchQuery }) => {
   const router = useRouter();
   const [filteredData, setFilteredData] = useState(null);
-  const [filteredProfileData, setFilteredProfileData] = useState(null);
   useEffect(() => {
     if (searchQuery == "ALL") {
       setFilteredData(data);
@@ -25,11 +23,6 @@ const Catalog = ({ catalogRef, searchQuery, profile }) => {
       setFilteredProfileData(data);
       return;
     }
-    setFilteredProfileData(
-      profileData.filter((word) => {
-        return word?.profileName[0] === searchQuery;
-      })
-    );
   }, [searchQuery]);
 
   return (
@@ -43,46 +36,7 @@ const Catalog = ({ catalogRef, searchQuery, profile }) => {
           className="md:ml-auto w-2/3 mx-auto py-10 md:mr-10 relative"
         >
           <div className="flex flex-col h-[30rem] overflow-y-auto gap-5">
-            {profile ? (
-              searchQuery ? (
-                filteredProfileData?.length != 0 ? (
-                  filteredProfileData?.map((item) => {
-                    return (
-                      <div
-                        onClick={() => router.push(`/book/${item.testId}`)}
-                        className="test-name space-y-4 p-5"
-                      >
-                        <p>{item.testName}</p>
-
-                        <button className="px-4 py-2 rounded-sm text-white md:hover:bg-[#005751] md:hover:scale-105 md:active:scale-75 ease-out duration-150 bg-primary ">
-                          Book Now
-                        </button>
-                      </div>
-                    );
-                  })
-                ) : (
-                  <div className="flex justify-center items-center">
-                    <p className="font-bold text-xl text-red-500">
-                      No Results Found!
-                    </p>
-                  </div>
-                )
-              ) : (
-                data?.map((item) => {
-                  return (
-                    <div
-                      onClick={() => router.push(`/book/${item.testId}`)}
-                      className="test-name space-y-4 p-5"
-                    >
-                      <p>{item.testName}</p>
-                      <button className="px-4 py-2 rounded-sm text-white md:hover:scale-105 md:active:scale-75 ease-out duration-150 bg-primary ">
-                        Book Now
-                      </button>
-                    </div>
-                  );
-                })
-              )
-            ) : searchQuery ? (
+            {searchQuery ? (
               filteredData?.length != 0 ? (
                 filteredData?.map((item) => {
                   return (
@@ -100,13 +54,13 @@ const Catalog = ({ catalogRef, searchQuery, profile }) => {
                 })
               ) : (
                 <div className="flex justify-center items-center">
-                  <p className="font-bold text-xl text-red-500">
+                  <p className="font-bold text-xl text-white px-4 py-2 rounded-md bg-gradient-to-r from-red-500 to-red-800 animate-pulse">
                     No Results Found!
                   </p>
                 </div>
               )
             ) : (
-              profileData?.map((item) => {
+              data?.map((item) => {
                 return (
                   <div
                     onClick={() => router.push(`/book/${item.testId}`)}
