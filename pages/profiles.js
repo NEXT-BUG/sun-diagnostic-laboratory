@@ -19,7 +19,7 @@ const Profiles = () => {
 
   return (
     <div className="min-h-screen w-screen">
-      <Hero />
+      <Hero title="Profiles" />
 
       <Catalog searchQuery={searchQuery} catalogRef={catalogRef} />
     </div>
