@@ -2,7 +2,7 @@ import React from "react";
 
 const PackagesCard = ({ packageName, rate, tests }) => {
   return (
-    <div className="bg-white md:hover:scale-105 duration-100 ease-out w-1/3 rounded-md shadow-2xl">
+    <div className="bg-white md:hover:scale-105 duration-100 w-full ease-out md:w-1/3 rounded-md shadow-2xl">
       <div className="w-full p-5 bg-gray-500 rounded-t-md">
         <p className="text-white font-bold text-center text-sm">
           {packageName}

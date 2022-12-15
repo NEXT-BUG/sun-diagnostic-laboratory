@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 import {
   AiOutlinePhone,
@@ -10,10 +11,16 @@ import {
 } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 const Footer = () => {
+  const router = useRouter();
   return (
     <div className="bg-black text-white pt-10">
       <div className="text-white w-screen bg-black flex flex-col space-y-4 lg:space-y-0 text-center lg:text-left lg:flex-row justify-evenly items-center lg:items-stretch">
-        <Image src={require("../assets/images/logo.png")} alt="logo" />
+        <Image
+          onClick={() => router.push("/")}
+          className="md:hover:scale-105 md:active:scale-95 duration-100 ease-out md:cursor-pointer"
+          src={require("../assets/images/logo.png")}
+          alt="logo"
+        />
         <div className="space-y-2">
           <h1 className="text-xl font-bold">CONTACT US</h1>
           <div className="flex space-x-2">
