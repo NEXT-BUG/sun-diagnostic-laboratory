@@ -145,11 +145,13 @@ const Booking = () => {
                 </LocalizationProvider>
               </div>
               <div className="flex items-center justify-between">
-                <p className="font-bold">Selected Test</p>
+                <p className="font-bold">
+                  Selected {testObject ? "Test" : "Profile"}
+                </p>
                 <Input
                   sx={{ width: "15rem" }}
                   variant="standard"
-                  value={testObject?.testName}
+                  value={testObject?.testName || profileObject?.profileName}
                   disabled
                 />
               </div>

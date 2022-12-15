@@ -20,7 +20,7 @@ const Catalog = ({ catalogRef, searchQuery }) => {
 
   useEffect(() => {
     if (searchQuery == "ALL") {
-      setFilteredProfileData(data);
+      setFilteredData(data);
       return;
     }
   }, [searchQuery]);
@@ -70,6 +70,7 @@ const Catalog = ({ catalogRef, searchQuery }) => {
                     className="test-name space-y-4 p-5"
                   >
                     <p>{item.profileName}</p>
+                    <p className="text-sm mt-1 text-gray-400">{item.desc}</p>
                     <button className="px-4 py-2 rounded-sm text-white md:hover:bg-[#005751] md:hover:scale-105 md:active:scale-75 ease-out duration-150 bg-primary">
                       Book Now
                     </button>
