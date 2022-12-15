@@ -125,8 +125,8 @@ const Header = (props) => {
           );
         })}
 
-        <AiOutlineDown className="lg:cursor-pointer text-[#00DCC9]" />
-        <BiSearch className="lg:cursor-pointer text-[#00DCC9]" />
+        {/* <AiOutlineDown className="lg:cursor-pointer text-[#00DCC9]" />
+        <BiSearch className="lg:cursor-pointer text-[#00DCC9]" /> */}
       </div>
     </div>
   );

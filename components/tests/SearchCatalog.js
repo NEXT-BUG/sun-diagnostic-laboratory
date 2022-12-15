@@ -36,7 +36,7 @@ const SearchCatalog = ({ shadow, border, className }) => {
   const router = useRouter();
   return (
     <div
-      className={`md:sticky top-20 my-10 bg-white border text-black ml-20 rounded-md ${
+      className={`md:sticky top-20 my-10 bg-white border text-black rounded-md ${
         shadow && "shadow-2xl"
       } ${border && "border border-black"} p-10 ${className}`}
     >
