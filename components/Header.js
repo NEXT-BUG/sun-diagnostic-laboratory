@@ -66,7 +66,7 @@ const routes = [
   },
 ];
 
-const Header = (props) => {
+const Header = ({ ref }) => {
   const router = useRouter();
   const path = router.pathname;
 
@@ -75,7 +75,10 @@ const Header = (props) => {
   if (!router.pathname) return null;
 
   return (
-    <div className="w-screen z-50 bg-black px-5 md:px-10 flex justify-between items-center">
+    <div
+      ref={ref}
+      className="w-screen z-50 bg-black px-5 md:px-10 flex justify-between items-center"
+    >
       <div className="bg-black">
         <Image
           src={require("../assets/images/logo.png")}

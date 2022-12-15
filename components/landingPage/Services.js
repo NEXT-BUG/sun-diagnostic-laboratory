@@ -14,7 +14,7 @@ const Services = () => {
           Provides Our Best Service
         </p>
 
-        <div className="flex flex-wrap justify-center lg:justify-start gap-5 w">
+        <div className="flex flex-wrap justify-center gap-5 w-full">
           <Cards
             title="Clinical Pathology"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
@@ -40,14 +40,28 @@ const Services = () => {
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
             image="services-4.png"
           />
+          <Cards
+            title="Clinical Pathology"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+            image="services-4.png"
+          />
+          <Cards
+            title="Clinical Pathology"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+            image="services-4.png"
+          />
+          <Cards
+            title="Clinical Pathology"
+            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+            image="services-4.png"
+          />
         </div>
       </div>
 
       <Image
         alt=""
         src={require("../../assets/images/doctors.png")}
-        className="h-[50%] object-cover hidden lg:inline-block object-top absolute bottom-0 right-0"
-        alt=""
+        className="opacity-20 h-[50%] object-cover hidden lg:inline-block object-top absolute bottom-0 right-0"
       />
     </div>
   );
@@ -57,12 +71,18 @@ export default Services;
 
 const Cards = ({ title, description, image }) => {
   return (
-    <div className="bg-[#313131] px-5 py-10 w-80 z-10 space-y-5 rounded-sm">
+    <div className="md:cursor-pointer bg-[#313131] group shadow-lg px-5 py-10 w-[16rem] z-10 space-y-5 rounded-sm">
       <div>
         <Image alt="" src={require(`../../assets/images/${image}`)} />
       </div>
       <p className="text-white font-bold text-xl">{title}</p>
-      <p className="text-white text-sm">{description}</p>
+      <div className="h-1 bg-primary w-full rounded-full" />
+      <p className="group-hover:-translate-y-32 group-hover:invisible duration-200 ease-out group-hover:text-[#313131] text-center font-bold text-white">
+        See More
+      </p>
+      <p className=" text-[#313131] translate-y-64 invisible group-hover:visible group-hover:text-white group-hover:translate-y-0 duration-200 ease-out  text-sm">
+        {description}
+      </p>
     </div>
   );
 };

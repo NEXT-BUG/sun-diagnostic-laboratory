@@ -20,12 +20,13 @@ const Hero = () => {
           <Cards
             title="Health Packages"
             image="hero-card-2.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+            description="Your health is our priority. We provide diagnostic testing for an affordable price and are dedicated to providing the best care for you!
+            "
           />
           <Cards
             title="Highly Accurate Reports"
             image="hero-card-3.png"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+            description="We provide highly accurate reports by Sun Diagnostic lab staff. We use latest techniques, state-of-art equipment and latest technologies to deliver our services."
           />
         </div>
       </div>
@@ -40,7 +41,7 @@ const Cards = ({ title, image, description }) => {
   return (
     <div className="bg-[#313131] w-64 p-5 space-y-3 rounded-sm border border-primary shadow-xl">
       <div className="w-10 h-10">
-        <Image alt="" src={require(`../../assets/images/${image}`)} alt="" />
+        <Image alt="" src={require(`../../assets/images/${image}`)} />
       </div>
       <p className="text-white font-bold text-lg">{title}</p>
       <div className="w-[30%] h-1 bg-primary rounded-md" />
