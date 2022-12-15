@@ -12,8 +12,8 @@ const About = () => {
           <div className="w-[40%] lg:hidden h-1 bg-black rounded-md" />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row justify-center items-center space-y-5 lg:space-y-0 lg:items-stretch lg:space-x-10 mt-20">
-        <div className="card-zoom w-96 h-[35rem] lg:h-auto border-2 border-primary">
+      <div className="flex flex-col w-full lg:flex-row justify-center items-center space-y-5 lg:space-y-0 lg:items-stretch lg:space-x-10 mt-20">
+        <div className="card-zoom md:w-96 h-[35rem] w-[20rem] lg:h-auto border-2 border-primary">
           <Image
             alt=""
             className="card-zoom-image"
@@ -26,8 +26,8 @@ const About = () => {
             Committed and Creative
           </p>
         </div>
-        <div className="flex flex-col items-stretch justify-between space-y-5 w-96 lg:w-[35rem]">
-          <div className="border-2 border-primary card-zoom h-64">
+        <div className="flex flex-col md:items-stretch items-center justify-between space-y-5 w-[20rem] lg:w-[35rem]">
+          <div className="border-2 border-primary md:w-full w-[20rem] card-zoom  h-64">
             <Image
               alt=""
               className="card-zoom-image"
@@ -40,7 +40,7 @@ const About = () => {
               Trust Pays Off
             </p>
           </div>
-          <div className="card-zoom border-2 border-primary h-64">
+          <div className="card-zoom border-2 w-[20rem] md:w-full border-primary h-64">
             <Image
               alt=""
               className="card-zoom-image"

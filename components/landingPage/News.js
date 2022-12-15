@@ -57,7 +57,7 @@ export default News;
 
 const Cards = ({ image, title, shortDesc }) => {
   return (
-    <div className="w-96 md:hover:scale-105 md:active:scale-95 duration-150 ease-out space-y-4 border rounded-lg border-primary">
+    <div className="md:w-96 w-[20rem] md:hover:scale-105 md:active:scale-95 duration-150 ease-out space-y-4 border rounded-lg border-primary">
       <Image
         alt=""
         src={require(`../../assets/images/${image}`)}
