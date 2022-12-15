@@ -45,6 +45,7 @@ const BlogCards = ({ title, image }) => {
     <div className="border-2 md:hover:scale-110 duration-200 ease-out md:cursor-pointer rounded-lg">
       <div className="relative w-full h-full">
         <Image
+          alt=""
           src={image}
           className="object-cover w-72 h-72 rounded-md shadow-2xl"
         />

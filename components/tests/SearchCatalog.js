@@ -54,9 +54,10 @@ const SearchCatalog = ({ shadow, border, className }) => {
         Test Catalog
       </h1>
       <div className="flex flex-wrap items-center gap-3 justify-center md:justify-start">
-        {alphabets?.map((item) => {
+        {alphabets?.map((item, index) => {
           return (
             <div
+              key={index}
               onClick={() => router.push("/tests?search=" + item)}
               className="catalog-letter"
             >

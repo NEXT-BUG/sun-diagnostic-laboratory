@@ -44,6 +44,7 @@ const Services = () => {
       </div>
 
       <Image
+        alt=""
         src={require("../../assets/images/doctors.png")}
         className="h-[50%] object-cover hidden lg:inline-block object-top absolute bottom-0 right-0"
         alt=""
@@ -58,7 +59,7 @@ const Cards = ({ title, description, image }) => {
   return (
     <div className="bg-[#313131] px-5 py-10 w-80 z-10 space-y-5 rounded-sm">
       <div>
-        <Image src={require(`../../assets/images/${image}`)} />
+        <Image alt="" src={require(`../../assets/images/${image}`)} />
       </div>
       <p className="text-white font-bold text-xl">{title}</p>
       <p className="text-white text-sm">{description}</p>

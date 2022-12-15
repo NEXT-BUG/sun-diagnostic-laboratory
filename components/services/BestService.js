@@ -33,6 +33,7 @@ const ServiceCard = ({ title, desc, image }) => {
       <div className="flex items-start justify-between relative w-full h-full">
         <p className="invisible">Hello</p>
         <Image
+          alt=""
           className="md:group-hover:opacity-100 h-64 relative bottom-0 opacity-40 right-0"
           src={image}
         />

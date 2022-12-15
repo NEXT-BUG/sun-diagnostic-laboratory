@@ -56,16 +56,21 @@ export default Testimonials;
 const Card = ({ quote, star, avatar, name, designation }) => {
   return (
     <div className="bg-black relative border-2 border-primary rounded-sm p-5 w-64 space-y-5 flex flex-col text-center items-center">
-      <Image src={require("../../assets/images/quote.png")} />
+      <Image alt="" src={require("../../assets/images/quote.png")} />
       <p className="text-white">{quote}</p>
       <div className="flex space-x-4 pb-4">
         {Array.from({ length: star }, (_, index) => index + 1)?.map(
           (_, index) => (
-            <Image src={require("../../assets/images/star.png")} />
+            <Image
+              alt=""
+              key={index}
+              src={require("../../assets/images/star.png")}
+            />
           )
         )}
       </div>
       <Image
+        alt=""
         src={require("../../assets/images/avatar.png")}
         className="absolute -bottom-10"
       />

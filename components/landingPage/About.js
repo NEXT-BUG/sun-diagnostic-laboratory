@@ -15,6 +15,7 @@ const About = () => {
       <div className="flex flex-col lg:flex-row justify-center items-center space-y-5 lg:space-y-0 lg:items-stretch lg:space-x-10 mt-20">
         <div className="card-zoom w-96 h-[35rem] lg:h-auto border-2 border-primary">
           <Image
+            alt=""
             className="card-zoom-image"
             src={require("../../assets/images/precision.png")}
           />
@@ -28,6 +29,7 @@ const About = () => {
         <div className="flex flex-col items-stretch justify-between space-y-5 w-96 lg:w-[35rem]">
           <div className="border-2 border-primary card-zoom h-64">
             <Image
+              alt=""
               className="card-zoom-image"
               src={require("../../assets/images/excellence.png")}
             />
@@ -40,6 +42,7 @@ const About = () => {
           </div>
           <div className="card-zoom border-2 border-primary h-64">
             <Image
+              alt=""
               className="card-zoom-image"
               src={require("../../assets/images/accuracy.png")}
             />

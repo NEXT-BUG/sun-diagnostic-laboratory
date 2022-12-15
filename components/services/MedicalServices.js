@@ -24,6 +24,7 @@ const MedicalServices = () => {
           </button>
         </div>
         <Image
+          alt=""
           className="w-96 h-96"
           src={require("../../assets/images/hero-img-2.png")}
         />

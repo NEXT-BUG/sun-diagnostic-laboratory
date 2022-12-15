@@ -40,7 +40,7 @@ const Cards = ({ title, image, description }) => {
   return (
     <div className="bg-[#313131] w-64 p-5 space-y-3 rounded-sm border border-primary shadow-xl">
       <div className="w-10 h-10">
-        <Image src={require(`../../assets/images/${image}`)} alt="" />
+        <Image alt="" src={require(`../../assets/images/${image}`)} alt="" />
       </div>
       <p className="text-white font-bold text-lg">{title}</p>
       <div className="w-[30%] h-1 bg-primary rounded-md" />

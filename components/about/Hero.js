@@ -4,7 +4,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div className="flex flex-col h-full lg:flex-row text-center lg:text-left items-center w-2/3 mx-auto space-x-10 justify-between mt-20">
-      <Image src={require("../../assets/images/hero-img-2.png")} />
+      <Image alt="" src={require("../../assets/images/hero-img-2.png")} />
       <div className="flex flex-col lg:w-2/3 space-y-5 mb-20">
         <h1 className="font-bold text-4xl font-ubuntu">
           Sun Diagnostics Laboratory

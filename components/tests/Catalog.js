@@ -38,9 +38,9 @@ const Catalog = ({ catalogRef, searchQuery }) => {
           <div className="flex flex-col h-[30rem] rounded-lg overflow-y-auto gap-5">
             {searchQuery ? (
               filteredData?.length != 0 ? (
-                filteredData?.map((item) => {
+                filteredData?.map((item, index) => {
                   return (
-                    <div className="test-name space-y-4 p-5">
+                    <div key={index} className="test-name space-y-4 p-5">
                       <p>{item.testName}</p>
 
                       <button
@@ -60,9 +60,9 @@ const Catalog = ({ catalogRef, searchQuery }) => {
                 </div>
               )
             ) : (
-              data?.map((item) => {
+              data?.map((item, index) => {
                 return (
-                  <div className="test-name space-y-4 p-5">
+                  <div key={index} className="test-name space-y-4 p-5">
                     <p>{item.testName}</p>
                     <button
                       onClick={() => router.push(`/book/${item.testId}`)}

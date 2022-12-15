@@ -33,6 +33,7 @@ const About = () => {
               </p>
             </div>
             <Image
+              alt=""
               className="rounded-sm"
               src={require("../assets/images/about-us-img.png")}
             />
@@ -43,6 +44,7 @@ const About = () => {
       <LatestBlog />
       <div className="relative h-fit w-screen">
         <Image
+          alt=""
           src={require("../assets/images/about-us-img-2.png")}
           className="relative h-96 lg:h-fit w-screen"
         />

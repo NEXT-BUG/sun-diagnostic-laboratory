@@ -21,6 +21,7 @@ const Hero = ({ title }) => {
           </button>
         </div>
         <Image
+          alt=""
           className="w-full h-full"
           src={require("../../assets/images/hero-img-2.png")}
         />

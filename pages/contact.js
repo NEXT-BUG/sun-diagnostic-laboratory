@@ -184,6 +184,7 @@ const Contact = () => {
         </div>
       </div>
       <Image
+        alt=""
         className="absolute right-20 bottom-0 md:hidden lg:block"
         src={require("../assets/images/letter-send.png")}
       />

@@ -11,7 +11,7 @@ const Packages = () => {
       <div className="flex gap-10 bg-gradient-to-b items-start from-primary to-black p-10 flex-col md:flex-row justify-evenly flex-wrap">
         <div className="w-2/3 mx-auto relative mb-32 top-20 bg-white h-1 rounded-lg" />
         {data?.map((item, index) => {
-          return <PackagesCard {...item} />;
+          return <PackagesCard key={index} {...item} />;
         })}
       </div>
     </div>

@@ -6,6 +6,7 @@ const Hero = () => {
     <div className="hero-bg h-[30rem] w-screen hidden lg:block lg:mb-64">
       <div className="relative px-20 py-10 h-full w-fit mx-auto">
         <Image
+          alt=""
           src={require("../../assets/images/blogs-hero.png")}
           className="rounded-lg shadow-md"
         />

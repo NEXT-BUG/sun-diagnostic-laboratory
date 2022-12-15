@@ -29,7 +29,11 @@ export default LatestBlog;
 const BlogCard = ({ image, title, desc }) => {
   return (
     <div className="p-2 bg-white shadow-lg w-80 md:w-96 rounded-md">
-      <Image className="object-fit object-center h-64 rounded-sm" src={image} />
+      <Image
+        alt=""
+        className="object-fit object-center h-64 rounded-sm"
+        src={image}
+      />
       <div className="p-5">
         <h1 className="font-bold text-xl">{title}</h1>
         <p className="">

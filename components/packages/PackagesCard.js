@@ -17,7 +17,7 @@ const PackagesCard = ({ packageName, rate, tests }) => {
       <div className="">
         {tests?.map((item, index) => {
           return (
-            <div className="p-4 border-t">
+            <div key={index} className="p-4 border-t">
               <p className="text-center text-sm">{item}</p>
             </div>
           );
