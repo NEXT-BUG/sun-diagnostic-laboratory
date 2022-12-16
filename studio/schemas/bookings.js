@@ -42,12 +42,6 @@ export default defineType({
       readOnly: true,
     }),
     defineField({
-      name: "prescription",
-      title: "Prescription",
-      type: "file",
-      readOnly: true,
-    }),
-    defineField({
       name: "home_collection_mobile_number",
       title: "Home Collection Mobile Number",
       type: "string",

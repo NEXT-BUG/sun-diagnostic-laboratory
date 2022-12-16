@@ -59,24 +59,28 @@ const About = () => {
         <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
           <h2 className="text-xl font-bold">Who we are</h2>
           <p className="text-sm font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore.
+            We at Diagnostic Lab are here to help you understand your body and
+            what’s going on. We are a diagnostics company dedicated to helping
+            you make smart decisions about your health.
           </p>
         </div>
         <div className="lg:h-20 rounded-sm bg-primary w-1" />
         <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
           <h2 className="text-xl font-bold">Our Vision</h2>
           <p className="text-sm font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore.
+            » We inspire to "Live Healthy”
+            <br /> » We deliver a “WOW” experience <br />» Precision and care is
+            our way of center
           </p>
         </div>
         <div className="rounded-sm lg:h-20 bg-primary w-1" />
         <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
           <h2 className="text-xl font-bold">How we work</h2>
           <p className="text-sm font-semibold">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore.
+            We are a diagnostic lab that provides fast, reliable and affordable
+            services to our patients. We have advanced equipment and superior
+            customer service to ensure you have the right diagnosis and
+            treatment for your specific needs.
           </p>
         </div>
       </div>

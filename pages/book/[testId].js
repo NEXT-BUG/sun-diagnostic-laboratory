@@ -7,6 +7,8 @@ import { data } from "../../mock/tests";
 import { data as profileData } from "../../mock/profiles";
 import { data as packagesData } from "../../mock/packages";
 import dayjs from "dayjs";
+import Loading from "../../components/Loading";
+import client from "../../studio/sanity-client";
 import ErrorPage from "next/error";
 import {
   FormControlLabel,
@@ -23,14 +25,30 @@ const Booking = () => {
 
   const router = useRouter();
   const { testId } = router.query;
+  const [loading, setLoading] = useState(true);
   const [testObject, setTestObject] = useState({});
   const [profileObject, setProfileObject] = useState({});
   const [packageObject, setPackageObject] = useState({});
+
+  const [formData, setFormData] = useState({
+    Name: "",
+    email: "",
+    dob: "",
+    mobile: "",
+    prefered_date_time: "",
+    test_profile_package: "",
+    house_no: "",
+    street_society: "",
+    city: "",
+    home_collection_mobile_number: "",
+  });
+
   useEffect(() => {
     if (testId) {
       const test = data.find((item) => item.testId === testId);
       setTestObject(test);
     }
+    setLoading(false);
   }, [testId]);
 
   useEffect(() => {
@@ -38,15 +56,20 @@ const Booking = () => {
       const test = profileData.find((item) => item.profileId === testId);
       setProfileObject(test);
     }
+    setLoading(false);
   }, [testId]);
   useEffect(() => {
     if (testId) {
       const test = packagesData.find((item) => item.packageId === testId);
       setPackageObject(test);
     }
+    setLoading(false);
   }, [testId]);
 
+  if (loading) return <Loading />;
+
   if (
+    !loading &&
     !data.find((item) => item.testId === testId) &&
     !profileData.find((item) => item.profileId === testId) &&
     !packagesData.find((item) => item.packageId === testId)
@@ -211,10 +234,6 @@ const Booking = () => {
                     endAdornment: <IconButton></IconButton>,
                   }}
                 />
-              </div>
-              <div className="flex items-center justify-between py-3">
-                <p className="font-bold">Attach a Prescription</p>
-                <input className="w-[15rem]" type="file" />
               </div>
             </div>
           </div>
