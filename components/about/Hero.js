@@ -12,8 +12,8 @@ const Hero = () => {
         <p className="font-ubuntu">
           Sun Diagnostic Laboratory is a state-of-the-art, Fully Automated
           Clinical Laboratory and Diagnostic Solution provider operating under
-          the clinical oversight of Experienced Consultants. Discoveree Lab
-          represents a new paradigm for pathology services. discoveree
+          the clinical oversight of Experienced Consultants. Sun Diagnostic Lab
+          represents a new paradigm for pathology services. Sun Diagnostic
           Laboratory delivers service of unrivaled quality and accuracy.
           Discoveree Laboratory also is constantly increasing its already
           wide-ranging test menu to accommodate the needs of India's dynamic
