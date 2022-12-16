@@ -42,15 +42,24 @@ const Contact = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-4">
                 <MdPhoneInTalk />
-                <p className="font-light text-sm">898328749</p>
+                <p className="font-light text-sm">
+                  +91 86123 16078
+                  <br />
+                  +91 90309 31931
+                </p>
               </div>
               <div className="flex items-center space-x-4">
                 <IoMdMail />
-                <p className="font-light text-sm">demo@gmail.com</p>
+                <p className="font-light text-sm">
+                  info@sundaignosticslaboratory.in
+                </p>
               </div>
               <div className="flex items-center space-x-4">
                 <MdLocationOn />
-                <p className="font-light text-sm">Address</p>
+                <p className="font-light text-sm">
+                  Main Branch: Ramamurthy Nagar, Nellore Other Branch: Pogathola
+                  - Nellore,Gudur,Kavali
+                </p>
               </div>
             </div>
             <div className="flex space-x-3">
