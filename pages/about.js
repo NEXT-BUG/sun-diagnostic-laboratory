@@ -1,18 +1,19 @@
 import Head from "next/head";
 import Image from "next/image";
 import LatestBlog from "../components/about/LatestBlog";
-import React from "react";
+import React, { useRef } from "react";
 import Hero from "../components/about/Hero";
 import Importance from "../components/about/Importance";
 
 const About = () => {
+  const aboutRef = useRef(null);
   return (
     <div className="w-screen min-h-screen">
       <Head>
         <title>SDL | About us</title>
       </Head>
-      <Hero />
-      <div className="w-screen -z-10 bg-primary relative">
+      <Hero aboutRef={aboutRef} />
+      <div ref={aboutRef} className="w-screen -z-10 bg-primary relative">
         <div className="absolute -z-10 h-[50%] w-screen bg-[#F4F4F4]" />
         <div className="p-10 lg:p-32 z-50">
           <div className="bg-white items-center justify-evenly gap-10 p-10 lg:p-20 flex lg:flex-row flex-col-reverse rounded-md shadow-2xl font-ubuntu">

@@ -15,7 +15,7 @@ const MedicalServices = () => {
             your care. Our diagnostic services are affordable and can help you
             get back on track with your treatment plan.
           </p>
-          <button className="text-xl font-bold border rounded-sm md:hover:scale-90 md:hover:bg-black duration-150 ease-out border-white px-4 py-3">
+          <button className="text-xl font-bold border rounded-sm md:hover:scale-90 md:hover:bg-primary duration-150 ease-out border-white px-4 py-3">
             Book Appointment
           </button>
         </div>

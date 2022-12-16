@@ -1,10 +1,9 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+import { TbPhoneCall } from "react-icons/tb";
 import {
-  AiOutlinePhone,
   AiOutlineMail,
-  AiOutlineCalendar,
   AiOutlineInstagram,
   AiOutlineFacebook,
   AiOutlineTwitter,
@@ -27,7 +26,7 @@ const Footer = () => {
         <div className="space-y-2">
           <h1 className="text-lg font-bold">Contact Us</h1>
           <div className="flex space-x-2">
-            <AiOutlinePhone className="text-primary w-5 h-5" />
+            <TbPhoneCall className="text-primary w-5 h-5" />
             <div className="flex flex-col space-y-1">
               <h1 className="font-semibold text-sm">+91 86123 16078</h1>
               <h1 className="font-semibold text-sm">+91 90309 31931</h1>
