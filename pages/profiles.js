@@ -19,7 +19,11 @@ const Profiles = () => {
 
   return (
     <div className="min-h-screen w-screen">
-      <Hero title="Profiles" />
+      <Hero
+        title="Profiles"
+        catalogRef={catalogRef}
+        description="Our Health Profiles diagnostic Services help you to identify what it is about your life that needs to be changed. This is done by using a very specific process and by following a very structured methodology."
+      />
 
       <Catalog searchQuery={searchQuery} catalogRef={catalogRef} />
     </div>

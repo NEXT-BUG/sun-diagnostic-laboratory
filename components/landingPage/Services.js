@@ -1,5 +1,10 @@
 import Image from "next/image";
 import React from "react";
+import { SlChemistry } from "react-icons/sl";
+import { FaMicroscope, FaViruses, FaShieldVirus } from "react-icons/fa";
+import { BiTestTube } from "react-icons/bi";
+import { GiDna2, GiStethoscope } from "react-icons/gi";
+import { TbTestPipe } from "react-icons/tb";
 
 const Services = () => {
   return (
@@ -16,44 +21,44 @@ const Services = () => {
 
         <div className="flex flex-wrap justify-center gap-5 w-full">
           <Cards
-            title="Clinical Pathology"
+            title="Clinical Biochemistry"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image="services-1.png"
+            image={<SlChemistry className="w-20 text-primary h-20" />}
           />
           <Cards
             title="Clinical Pathology"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image="services-2.png"
+            image={<FaMicroscope className="w-20 text-primary h-20" />}
           />
           <Cards
-            title="Clinical Pathology"
+            title="Hematology"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image="services-3.png"
+            image={<BiTestTube className="w-20 text-primary h-20" />}
           />
           <Cards
-            title="Clinical Pathology"
+            title="Molecular Diagnostics"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image="services-3.png"
+            image={<GiDna2 className="w-20 text-primary h-20" />}
           />
           <Cards
-            title="Clinical Pathology"
+            title="Immunology"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image="services-4.png"
+            image={<GiStethoscope className="w-20 text-primary h-20" />}
           />
           <Cards
-            title="Clinical Pathology"
+            title="Serology"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image="services-4.png"
+            image={<TbTestPipe className="w-20 text-primary h-20" />}
           />
           <Cards
-            title="Clinical Pathology"
+            title="Histo & cytopathology"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image="services-4.png"
+            image={<FaViruses className="w-20 text-primary h-20" />}
           />
           <Cards
-            title="Clinical Pathology"
+            title="Microbiology"
             description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image="services-4.png"
+            image={<FaShieldVirus className="w-20 text-primary h-20" />}
           />
         </div>
       </div>
@@ -71,16 +76,14 @@ export default Services;
 
 const Cards = ({ title, description, image }) => {
   return (
-    <div className="md:cursor-pointer bg-[#313131] group shadow-lg px-5 py-10 w-[16rem] z-10 space-y-5 rounded-sm">
-      <div>
-        <Image alt="" src={require(`../../assets/images/${image}`)} />
-      </div>
-      <p className="text-white font-bold text-xl">{title}</p>
-      <div className="h-1 bg-primary w-full rounded-full" />
-      <p className="group-hover:-translate-y-32 group-hover:invisible duration-200 ease-out group-hover:text-[#313131] text-center font-bold text-white">
+    <div className="md:cursor-pointer bg-[#313131] duration-700 ease-out group shadow-lg px-5 hover:pb-5 w-[16rem] z-10 space-y-5 rounded-sm">
+      <div className="translate-y-10">{image}</div>
+      <p className="text-white font-bold text-xl translate-y-10">{title}</p>
+      <div className="h-1 bg-primary w-full translate-y-10 rounded-full" />
+      <p className="group-hover:-translate-y-10 translate-y-10 group-hover:invisible duration-200 ease-out group-hover:text-[#313131] text-center font-bold text-white">
         See More
       </p>
-      <p className=" text-[#313131] translate-y-64 invisible group-hover:visible group-hover:text-white group-hover:translate-y-0 duration-200 ease-out  text-sm">
+      <p className=" text-[#313131] translate-y-10 invisible group-hover:visible group-hover:text-white group-hover:translate-y-0 duration-200 ease-out  text-sm">
         {description}
       </p>
     </div>

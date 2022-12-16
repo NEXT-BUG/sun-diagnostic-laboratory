@@ -102,7 +102,12 @@ const Header = ({ ref }) => {
             {routes.map((route, index) => {
               return (
                 <ListItem key={index}>
-                  <ListItemButton onClick={() => router.push(route.path)}>
+                  <ListItemButton
+                    onClick={() => {
+                      router.push(route.path);
+                      setMenuState(false);
+                    }}
+                  >
                     <ListItemIcon>{route.icons}</ListItemIcon>
                     <ListItemText primary={route.name} />
                   </ListItemButton>
@@ -127,9 +132,6 @@ const Header = ({ ref }) => {
             </p>
           );
         })}
-
-        {/* <AiOutlineDown className="lg:cursor-pointer text-[#00DCC9]" />
-        <BiSearch className="lg:cursor-pointer text-[#00DCC9]" /> */}
       </div>
     </div>
   );

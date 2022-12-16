@@ -12,10 +12,11 @@ const Hero = () => {
           Sun Diagnostic <br /> Laboratory
         </h1>
         <p className="text-white text-xl text-center lg:text-left lg:w-2/3 font-light font-ubuntu">
-          You can take most things for granted in life and get away with it.
-          Your health is not one of them. We often tend to forget the brevity of
-          life, due to the myriad distractions that surround us in the modern
-          world. This is a reality
+          Sun Diagnostic Laboratory is a state-of-the-art, fully automated
+          Clinical Laboratory and diagnostic solution provider operating under
+          the clinical oversight of Experienced Consultants. Sun Diagnostic lab
+          represents a new paradigm for pathology services. Sun Diagnostic
+          Laboratory delivers service of unrivaled quality and accuracy.
         </p>
         <button className="border text-xl font-bold md:hover:bg-primary md:hover:text-black md:hover:border-black md:hover:scale-90 duration-150 ease-out border-primary text-white py-4 px-6">
           View More
