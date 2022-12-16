@@ -5,10 +5,8 @@ import { schemaTypes } from "./schemas";
 
 export default defineConfig({
   basePath: "/studio",
-  name: "Sun Diagnostics Laboratory",
-  title: "Sun Diagnostics Laboratory - Studio",
-  name: "default",
   title: "sun-diagnostics-laboratory",
+  name: "sun-diagnostics-laboratory",
 
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
