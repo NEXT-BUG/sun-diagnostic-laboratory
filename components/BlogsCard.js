@@ -5,7 +5,7 @@ const BlogsCard = ({ image, title, desc }) => {
     <div className="p-2 bg-white shadow-lg w-80 md:w-96 rounded-md">
       <Image
         alt=""
-        className="object-fit object-center h-64 rounded-sm"
+        className="object-fit object-center h-96 rounded-sm"
         src={image}
       />
       <div className="p-5">
@@ -14,6 +14,7 @@ const BlogsCard = ({ image, title, desc }) => {
       </div>
       <div className="flex justify-between p-5">
         <p className="text-gray-400 font-bold">Date</p>
+        <p>17/12/2022</p>
       </div>
     </div>
   );

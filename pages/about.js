@@ -62,10 +62,12 @@ const About = () => {
             <div className="justify-center items-center space-y-3 flex flex-col w-80 lg:w-96 shadow-2xl rounded-sm bg-white p-7">
               <p className="text-4xl text-center font-bold">Mission</p>
               <div className="text-xs text-center flex flex-col items-start">
-                <p>» ANEMIA ASSESSMENT PROFILE</p>
-                <p>» ANTI MUSK ANTIBODY(MYASTHERIA GRAVIS)</p>
-                <p>» ANTI SS-B(ANTI LA)ANTIBODY</p>
-                <p>» ANTI SSA(ANTI RO)ANTIBODY</p>
+                <p>
+                  » To be the most admired diagnostic laboratory in south India
+                  <br />
+                  » To build confidence in the medical community <br />» To
+                  enhance customer access by increasing first time users
+                </p>
               </div>
             </div>
           </div>
