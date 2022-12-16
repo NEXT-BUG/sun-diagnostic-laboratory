@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { MdPhoneInTalk, MdLocationOn } from "react-icons/md";
 import { IoMdMail } from "react-icons/io";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
-import toast from "react-hot-toast";
-import emailjs from "@emailjs/browser";
 import { FaDiscord } from "react-icons/fa";
 import SendIcon from "@mui/icons-material/Send";
 import { FormControlLabel, RadioGroup } from "@mui/material";
@@ -19,32 +17,6 @@ const Contact = () => {
     mobile: "",
     message: "",
   });
-
-  const onSend = () => {
-    const alert = toast.loading(<b>Sending Message...</b>);
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_SERIVICE_ID,
-        process.env.NEXT_PUBLIC_TEMPLATE_ID,
-        {
-          from_name: formData.firstName + " " + formData.lastName,
-          from_email: formData.email,
-          message: formData.message,
-          mobile: formData.mobile,
-        },
-        process.env.NEXT_PUBLIC_APIKEY
-      )
-      .then((result) =>
-        toast.success(<b>{result.text}</b>, {
-          id: alert,
-        })
-      )
-      .catch((error) =>
-        toast.dismiss(<b>{error.text}</b>, {
-          id: alert,
-        })
-      );
-  };
 
   return (
     <div className="w-screen h-full py-10 bg-slate-100">
@@ -93,7 +65,7 @@ const Contact = () => {
               </div>
             </div>
           </div>
-          <form className="flex flex-col mt-5 lg:mt-0 space-y-6 items-center justify-center p-3 w-full">
+          <form className="flex flex-col mt-5 lg:mt-0 space-y-5 items-center justify-center p-3 w-full">
             <div className="flex justify-evenly w-full space-x-3 lg:space-x-0">
               <Input
                 onChange={(e) =>
@@ -134,33 +106,6 @@ const Contact = () => {
                 label="Phone Number"
               />
             </div>
-            <div className="px-5 md:px-0">
-              <p className="text-sm font-bold text-left">Select Subject?</p>
-              <div className="mt-1">
-                <RadioGroup row>
-                  <FormControlLabel
-                    control={<RadioStyle />}
-                    label="Inquiry 1"
-                    value="Inquiry 1"
-                  />
-                  <FormControlLabel
-                    control={<RadioStyle />}
-                    label="Inquiry 2"
-                    value="Inquiry 2"
-                  />
-                  <FormControlLabel
-                    control={<RadioStyle />}
-                    label="Inquiry 3"
-                    value="Inquiry 3"
-                  />
-                  <FormControlLabel
-                    control={<RadioStyle />}
-                    label="Inquiry 4"
-                    value="Inquiry 4"
-                  />
-                </RadioGroup>
-              </div>
-            </div>
             <div className="w-full md:w-2/3">
               <Input
                 fullWidth
@@ -173,7 +118,6 @@ const Contact = () => {
               />
             </div>
             <SendButton
-              onClick={onSend}
               variant="contained"
               endIcon={<SendIcon />}
               disableElevation
@@ -183,11 +127,6 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <Image
-        alt=""
-        className="absolute right-20 bottom-0 md:hidden lg:block"
-        src={require("../assets/images/letter-send.png")}
-      />
     </div>
   );
 };

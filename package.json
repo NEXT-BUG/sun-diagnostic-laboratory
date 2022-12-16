@@ -12,6 +12,7 @@
     "@mui/icons-material": "^5.10.9",
     "@mui/material": "^5.10.11",
     "@mui/x-date-pickers": "^5.0.10",
+    "@sanity/client": "^3.4.1",
     "@sanity/vision": "^3.0.0",
     "dayjs": "^1.11.7",
     "next": "latest",

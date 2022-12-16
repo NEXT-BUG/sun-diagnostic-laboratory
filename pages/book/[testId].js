@@ -5,7 +5,8 @@ import ProfileSearchCatalog from "../../components/profiles/SearchCatalog";
 import { DesktopDatePicker } from "@mui/x-date-pickers/DesktopDatePicker";
 import { data } from "../../mock/tests";
 import { data as profileData } from "../../mock/profiles";
-import dayjs, { Dayjs } from "dayjs";
+import { data as packagesData } from "../../mock/packages";
+import dayjs from "dayjs";
 import ErrorPage from "next/error";
 import {
   FormControlLabel,
@@ -24,6 +25,7 @@ const Booking = () => {
   const { testId } = router.query;
   const [testObject, setTestObject] = useState({});
   const [profileObject, setProfileObject] = useState({});
+  const [packageObject, setPackageObject] = useState({});
   useEffect(() => {
     if (testId) {
       const test = data.find((item) => item.testId === testId);
@@ -37,24 +39,33 @@ const Booking = () => {
       setProfileObject(test);
     }
   }, [testId]);
+  useEffect(() => {
+    if (testId) {
+      const test = packagesData.find((item) => item.packageId === testId);
+      setPackageObject(test);
+    }
+  }, [testId]);
 
   if (
     !data.find((item) => item.testId === testId) &&
-    !profileData.find((item) => item.profileId === testId)
+    !profileData.find((item) => item.profileId === testId) &&
+    !packagesData.find((item) => item.packageId === testId)
   )
     return <ErrorPage statusCode="404" />;
 
   return (
     <div className="w-screen min-h-screen">
       <div className="p-3 pt-10 md:p-10 flex flex-col-reverse md:flex-row justify-between items-start font-ubuntu md:space-x-10">
-        {profileObject ? (
+        {packageObject ? null : profileObject ? (
           <ProfileSearchCatalog border shadow className="md:w-1/3" />
         ) : (
           <SearchCatalog border shadow className="md:w-1/3" />
         )}
         <div className="text-left md:w-2/3">
           <p className="font-bold text-4xl">
-            {testObject?.testName || profileObject?.profileName}
+            {testObject?.testName ||
+              profileObject?.profileName ||
+              packageObject?.packageName}
           </p>
           <div className="mt-20">
             <h1 className="font-bold text-2xl">Book Now</h1>
@@ -151,7 +162,11 @@ const Booking = () => {
                 <Input
                   sx={{ width: "15rem" }}
                   variant="standard"
-                  value={testObject?.testName || profileObject?.profileName}
+                  value={
+                    testObject?.testName ||
+                    profileObject?.profileName ||
+                    packageObject?.packageName
+                  }
                   disabled
                 />
               </div>
@@ -166,7 +181,7 @@ const Booking = () => {
                 <Input
                   sx={{ width: "15rem" }}
                   variant="standard"
-                  label="Full Name"
+                  label="House Number"
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -174,7 +189,16 @@ const Booking = () => {
                 <Input
                   sx={{ width: "15rem" }}
                   variant="standard"
-                  label="Email Address"
+                  label="Street/Society"
+                />
+              </div>
+              <div className="flex items-center justify-between">
+                <p className="font-bold">City Name</p>
+                <Input
+                  sx={{ width: "15rem" }}
+                  variant="standard"
+                  value="Chennai"
+                  disabled
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -191,15 +215,6 @@ const Booking = () => {
               <div className="flex items-center justify-between py-3">
                 <p className="font-bold">Attach a Prescription</p>
                 <input className="w-[15rem]" type="file" />
-              </div>
-              <div className="flex items-center justify-between">
-                <p className="font-bold">City Name</p>
-                <Input
-                  sx={{ width: "15rem" }}
-                  variant="standard"
-                  value="Chennai"
-                  disabled
-                />
               </div>
             </div>
           </div>
