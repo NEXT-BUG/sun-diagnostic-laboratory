@@ -10,10 +10,16 @@ const Hero = () => {
           Sun Diagnostics Laboratory
         </h1>
         <p className="font-ubuntu">
-          You can take most things for granted in life and get away with it.
-          Your health is not one of them. We often tend to forget the brevity of
-          life, due to the myriad distractions that surround us in the modern
-          world. This is a reality
+          Sun Diagnostic Laboratory is a state-of-the-art, Fully Automated
+          Clinical Laboratory and Diagnostic Solution provider operating under
+          the clinical oversight of Experienced Consultants. Discoveree Lab
+          represents a new paradigm for pathology services. discoveree
+          Laboratory delivers service of unrivaled quality and accuracy.
+          Discoveree Laboratory also is constantly increasing its already
+          wide-ranging test menu to accommodate the needs of India's dynamic
+          healthcare landscape. Discoveree Laboratory has well equipped ultra
+          modern diagnostic laboratory. Provides excellent platform to carry
+          wide range of investigations using modern technology.
         </p>
         <div className="flex space-x-4">
           <button className="md:hover:scale-105 md:hover:bg-slate-100 duration-300 ease-out font-semibold px-8 bg-[#F4F4F4] py-3 rounded-full border">
