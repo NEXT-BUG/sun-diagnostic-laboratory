@@ -46,6 +46,13 @@ const Contact = () => {
           id: toastId,
         });
         console.log(`Document was created, document ID is ${res._id}`);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          mobile: "",
+          message: "",
+        });
       })
       .catch((err) => {
         toast.error(<b>Contact Form is not Submitted - Error Occurred</b>, {

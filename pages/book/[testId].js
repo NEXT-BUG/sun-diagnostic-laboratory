@@ -113,6 +113,16 @@ const Booking = () => {
           id: toastId,
         });
         console.log(`Document was created, document ID is ${res._id}`);
+        setFormData({
+          salutation: "Mr.",
+          name: "",
+          email: "",
+          mobile: "",
+          houseNumber: "",
+          streetSociety: "",
+          city: "Chennai",
+          houseCollectionMobileNumber: "",
+        });
       })
       .catch((err) => {
         toast.error(<b>Booking is not Scheduled - Error Occurred</b>, {
