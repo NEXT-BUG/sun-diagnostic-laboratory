@@ -56,8 +56,8 @@ const Footer = () => {
                 <h1 className="font-semibold text-neutral-300 text-xs">
                   Other Branch:
                 </h1>
-                <p className="font-bold text-sm">
-                  Pogathola - Nellore,Gudur,Kavali
+                <p className="font-bold text-sm no-wrap">
+                  Pogathota - Nellore, Gudur, Kavali
                 </p>
               </div>
             </div>
