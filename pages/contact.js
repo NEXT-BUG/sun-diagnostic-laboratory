@@ -4,10 +4,10 @@ import { IoMdMail } from "react-icons/io";
 import { BsTwitter, BsInstagram } from "react-icons/bs";
 import { FaDiscord } from "react-icons/fa";
 import SendIcon from "@mui/icons-material/Send";
-import { FormControlLabel, RadioGroup } from "@mui/material";
 import Head from "next/head";
-import Image from "next/image";
-import { Input, RadioStyle, SendButton } from "../components/styledMUI";
+import { Input, SendButton } from "../components/styledMUI";
+import { toast } from "react-hot-toast";
+import client from "../studio/sanity-client";
 
 const Contact = () => {
   const [formData, setFormData] = React.useState({
@@ -17,6 +17,43 @@ const Contact = () => {
     mobile: "",
     message: "",
   });
+
+  const addToSanity = () => {
+    const toastId = toast.loading(<b>Submitting Contact Form...</b>);
+    if (
+      !formData.firstName ||
+      !formData.lastName ||
+      !formData.email ||
+      !formData.mobile ||
+      !formData.message
+    ) {
+      toast.error(<b>Please fill all the required fields!</b>, { id: toastId });
+      return;
+    }
+
+    const doc = {
+      _type: "contact",
+      name: `${formData.firstName} ${formData.lastName}`,
+      email: formData.email,
+      mobile: formData.mobile,
+      message: formData.message,
+    };
+
+    client
+      .create(doc)
+      .then((res) => {
+        toast.success(<b>Contact Form is Successfully Submitted</b>, {
+          id: toastId,
+        });
+        console.log(`Document was created, document ID is ${res._id}`);
+      })
+      .catch((err) => {
+        toast.error(<b>Contact Form is not Submitted - Error Occurred</b>, {
+          id: toastId,
+        });
+        console.error(err);
+      });
+  };
 
   return (
     <div className="w-screen h-full py-10 bg-slate-100">
@@ -130,6 +167,7 @@ const Contact = () => {
               variant="contained"
               endIcon={<SendIcon />}
               disableElevation
+              onClick={addToSanity}
             >
               Send
             </SendButton>

@@ -77,6 +77,7 @@ const Booking = () => {
     return <ErrorPage statusCode="404" />;
 
   const addToSanity = () => {
+    const toastId = toast.loading(<b>Booking is being Scheduled</b>);
     if (
       formData.name === "" ||
       formData.email === "" ||
@@ -85,7 +86,7 @@ const Booking = () => {
       formData.streetSociety === "" ||
       formData.houseCollectionMobileNumber === ""
     ) {
-      toast.error(<b>Please fill all the fields</b>);
+      toast.error(<b>Please fill all the fields</b>, { id: toastId });
       return;
     }
 
@@ -108,11 +109,15 @@ const Booking = () => {
     client
       .create(doc)
       .then((res) => {
-        toast.success(<b>Booking is Successfully Scheduled</b>);
+        toast.success(<b>Booking is Successfully Scheduled</b>, {
+          id: toastId,
+        });
         console.log(`Document was created, document ID is ${res._id}`);
       })
       .catch((err) => {
-        toast.error(<b>Booking is not Scheduled - Error Occurred</b>);
+        toast.error(<b>Booking is not Scheduled - Error Occurred</b>, {
+          id: toastId,
+        });
         console.error(err);
       });
   };
