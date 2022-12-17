@@ -3,7 +3,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <div className="hero-bg h-[30rem] w-screen hidden lg:block lg:mb-64">
+    <div className="hero-bg h-[30rem] bg-black w-screen hidden lg:block lg:mb-64">
       <div className="relative px-20 py-10 h-full w-fit mx-auto">
         <Image
           alt=""

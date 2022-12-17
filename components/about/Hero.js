@@ -5,13 +5,13 @@ import { useRouter } from "next/router";
 const Hero = ({ aboutRef }) => {
   const router = useRouter();
   return (
-    <div className="flex flex-col h-full lg:flex-row text-center lg:text-left items-center w-2/3 mx-auto space-x-10 justify-between mt-20">
+    <div className="flex flex-col h-full lg:flex-row text-center lg:text-left items-start w-2/3 mx-auto space-x-10 justify-between mt-20">
       <Image alt="" src={require("../../assets/images/hero-img-2.png")} />
       <div className="flex flex-col lg:w-2/3 space-y-5 mb-20">
         <h1 className="font-bold text-4xl font-ubuntu">
           Sun Diagnostics Laboratory
         </h1>
-        <p className="font-ubuntu">
+        <p className="font-ubuntu text-xs">
           Sun Diagnostic Laboratory is a state-of-the-art, Fully Automated
           Clinical Laboratory and Diagnostic Solution provider operating under
           the clinical oversight of Experienced Consultants. Sun Diagnostic Lab

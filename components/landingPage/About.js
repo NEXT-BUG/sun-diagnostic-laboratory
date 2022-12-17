@@ -55,7 +55,7 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="text-white mt-5 flex flex-col lg:flex-row items-center text-center lg:text-left space-y-5 lg:space-y-0 justify-evenly p-10">
+      <div className="text-white mt-5 flex flex-col lg:flex-row items-center md:items-start text-center lg:text-left space-y-5 lg:space-y-0 justify-evenly p-10">
         <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
           <h2 className="text-xl font-bold">Who we are</h2>
           <p className="text-sm font-semibold">
@@ -64,7 +64,7 @@ const About = () => {
             you make smart decisions about your health.
           </p>
         </div>
-        <div className="lg:h-20 rounded-sm bg-primary w-1" />
+        <div className="lg:h-[12rem] rounded-sm bg-primary w-1" />
         <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
           <h2 className="text-xl font-bold">Our Vision</h2>
           <p className="text-sm font-semibold">
@@ -73,7 +73,7 @@ const About = () => {
             our way of center
           </p>
         </div>
-        <div className="rounded-sm lg:h-20 bg-primary w-1" />
+        <div className="rounded-sm lg:h-[12rem] bg-primary w-1" />
         <div className="border-2 lg:border-0 border-primary p-5 lg:p-0 rounded-sm lg:rounded-none space-y-5 w-64">
           <h2 className="text-xl font-bold">How we work</h2>
           <p className="text-sm font-semibold">

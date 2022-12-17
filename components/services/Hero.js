@@ -1,7 +1,6 @@
-import Image from "next/image";
 import React from "react";
 import { SlMouse } from "react-icons/sl";
-const Hero = () => {
+const Hero = ({ viewMoreRef }) => {
   return (
     <div className="h-full w-screen hero-bg bg-black">
       <div className="pb-10 w-2/3 mx-auto space-y-10 flex flex-col items-center lg:items-start">
@@ -18,7 +17,14 @@ const Hero = () => {
           represents a new paradigm for pathology services. Sun Diagnostic
           Laboratory delivers service of unrivaled quality and accuracy.
         </p>
-        <button className="border text-xl font-bold md:hover:rounded-full md:hover:bg-primary md:hover:text-black md:hover:border-black md:hover:scale-90 duration-300 ease-out border-primary text-white py-4 px-6">
+        <button
+          onClick={() =>
+            viewMoreRef.current.scrollIntoView({
+              behavior: "smooth",
+            })
+          }
+          className="border text-xl font-bold md:hover:rounded-full md:active:scale-75 md:hover:bg-primary md:hover:text-black md:hover:border-black md:hover:scale-105 duration-200 ease-out border-primary text-white py-4 px-6"
+        >
           View More
         </button>
       </div>
