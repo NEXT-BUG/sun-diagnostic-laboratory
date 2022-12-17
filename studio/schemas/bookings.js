@@ -1,8 +1,8 @@
 import { defineField, defineType } from "sanity";
 
 export default defineType({
-  name: "tests",
-  title: "Test Bookings",
+  name: "bookings",
+  title: "Bookings",
   type: "document",
   fields: [
     defineField({
@@ -20,7 +20,7 @@ export default defineType({
     defineField({
       name: "dob",
       title: "Date of Birth",
-      type: "date",
+      type: "string",
       readOnly: true,
     }),
     defineField({
@@ -64,7 +64,7 @@ export default defineType({
   preview: {
     select: {
       title: "name",
-      subtitle: "email",
+      subtitle: "selected_test",
     },
   },
 });

@@ -19,9 +19,11 @@ import {
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { Input, RadioStyle } from "../../components/styledMUI";
 import { DateTimePicker, LocalizationProvider } from "@mui/x-date-pickers";
+import { toast } from "react-hot-toast";
 
 const Booking = () => {
-  const [date, setDate] = useState(dayjs());
+  const [dateOfBirth, setDateOfBirth] = useState(dayjs());
+  const [dateTime, setDateTime] = useState(dayjs());
 
   const router = useRouter();
   const { testId } = router.query;
@@ -31,16 +33,14 @@ const Booking = () => {
   const [packageObject, setPackageObject] = useState({});
 
   const [formData, setFormData] = useState({
-    Name: "",
+    salutation: "Mr.",
+    name: "",
     email: "",
-    dob: "",
     mobile: "",
-    prefered_date_time: "",
-    test_profile_package: "",
-    house_no: "",
-    street_society: "",
-    city: "",
-    home_collection_mobile_number: "",
+    houseNumber: "",
+    streetSociety: "",
+    city: "Chennai",
+    houseCollectionMobileNumber: "",
   });
 
   useEffect(() => {
@@ -76,6 +76,47 @@ const Booking = () => {
   )
     return <ErrorPage statusCode="404" />;
 
+  const addToSanity = () => {
+    if (
+      formData.name === "" ||
+      formData.email === "" ||
+      formData.mobile === "" ||
+      formData.houseNumber === "" ||
+      formData.streetSociety === "" ||
+      formData.houseCollectionMobileNumber === ""
+    ) {
+      toast.error(<b>Please fill all the fields</b>);
+      return;
+    }
+
+    const doc = {
+      _type: "bookings",
+      name: `${formData.salutation} ${formData.name}`,
+      email: formData.email,
+      dob: dateOfBirth.toLocaleString().split(" ").slice(0, 4).join(" "),
+      mobile_number: formData.mobile,
+      prefered_date_time: dateTime,
+      selected_test:
+        testObject?.testName ||
+        profileObject?.profileName ||
+        packageObject?.packageName,
+      home_collection_mobile_number: formData.houseCollectionMobileNumber,
+      address: `${formData.houseNumber}, ${formData.streetSociety}, ${formData.city}`,
+      client_status: false,
+    };
+
+    client
+      .create(doc)
+      .then((res) => {
+        toast.success(<b>Booking is Successfully Scheduled</b>);
+        console.log(`Document was created, document ID is ${res._id}`);
+      })
+      .catch((err) => {
+        toast.error(<b>Booking is not Scheduled - Error Occurred</b>);
+        console.error(err);
+      });
+  };
+
   return (
     <div className="w-screen min-h-screen">
       <div className="p-3 pt-10 md:p-10 flex flex-col-reverse md:flex-row justify-between items-start font-ubuntu md:space-x-10">
@@ -96,7 +137,13 @@ const Booking = () => {
             <div className="flex flex-col md:p-10 space-y-2">
               <div className="flex items-center justify-between">
                 <p className="font-bold">Salutation</p>
-                <RadioGroup row>
+                <RadioGroup
+                  row
+                  value={formData.salutation}
+                  onChange={(e) =>
+                    setFormData({ ...formData, salutation: e.target.value })
+                  }
+                >
                   <FormControlLabel
                     control={<RadioStyle />}
                     label="Mr."
@@ -125,6 +172,10 @@ const Booking = () => {
                   sx={{ width: "15rem" }}
                   variant="standard"
                   label="Full Name"
+                  value={formData.name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -133,14 +184,18 @@ const Booking = () => {
                   sx={{ width: "15rem" }}
                   variant="standard"
                   label="Email Address"
+                  value={formData.email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                 />
               </div>
               <div className="flex items-center justify-between">
                 <p className="font-bold">Date of Birth</p>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DesktopDatePicker
-                    onChange={(date) => setDate(date)}
-                    value={date}
+                    onChange={(date) => setDateOfBirth(date)}
+                    value={dateOfBirth}
                     renderInput={(params) => (
                       <Input
                         variant="standard"
@@ -155,10 +210,15 @@ const Booking = () => {
                 <p className="font-bold">Mobile Number</p>
                 <Input
                   sx={{ width: "15rem" }}
+                  value={formData.mobile}
+                  onChange={(e) =>
+                    setFormData({ ...formData, mobile: e.target.value })
+                  }
                   variant="standard"
                   InputProps={{
-                    startAdornment: <InputAdornment>+91</InputAdornment>,
-                    endAdornment: <IconButton></IconButton>,
+                    startAdornment: (
+                      <InputAdornment position="start">+91</InputAdornment>
+                    ),
                   }}
                 />
               </div>
@@ -166,8 +226,8 @@ const Booking = () => {
                 <p className="font-bold">Preferred Date and Time</p>
                 <LocalizationProvider dateAdapter={AdapterDayjs}>
                   <DateTimePicker
-                    onChange={(date) => setDate(date)}
-                    value={date}
+                    onChange={(date) => setDateTime(date)}
+                    value={dateTime}
                     renderInput={(params) => (
                       <Input
                         variant="standard"
@@ -188,7 +248,8 @@ const Booking = () => {
                   value={
                     testObject?.testName ||
                     profileObject?.profileName ||
-                    packageObject?.packageName
+                    packageObject?.packageName ||
+                    "Loading"
                   }
                   disabled
                 />
@@ -202,6 +263,10 @@ const Booking = () => {
               <div className="flex items-center justify-between">
                 <p className="font-bold">House Number</p>
                 <Input
+                  value={formData?.houseNumber}
+                  onChange={(e) =>
+                    setFormData({ ...formData, houseNumber: e.target.value })
+                  }
                   sx={{ width: "15rem" }}
                   variant="standard"
                   label="House Number"
@@ -210,6 +275,10 @@ const Booking = () => {
               <div className="flex items-center justify-between">
                 <p className="font-bold">Street/Society</p>
                 <Input
+                  value={formData?.streetSociety}
+                  onChange={(e) =>
+                    setFormData({ ...formData, streetSociety: e.target.value })
+                  }
                   sx={{ width: "15rem" }}
                   variant="standard"
                   label="Street/Society"
@@ -227,18 +296,29 @@ const Booking = () => {
               <div className="flex items-center justify-between">
                 <p className="font-bold">Mobile Number</p>
                 <Input
+                  value={formData?.houseCollectionMobileNumber}
+                  onChange={(e) =>
+                    setFormData({
+                      ...formData,
+                      houseCollectionMobileNumber: e.target.value,
+                    })
+                  }
                   sx={{ width: "15rem" }}
                   variant="standard"
                   InputProps={{
-                    startAdornment: <InputAdornment>+91</InputAdornment>,
-                    endAdornment: <IconButton></IconButton>,
+                    startAdornment: (
+                      <InputAdornment position="start">+91</InputAdornment>
+                    ),
                   }}
                 />
               </div>
             </div>
           </div>
           <div className="flex justify-between m-5">
-            <button className="px-4 text-white font-bold py-2 md:hover:scale-110 md:active:scale-75 duration-150 ease-out bg-primary rounded-md ml-auto">
+            <button
+              onClick={addToSanity}
+              className="px-4 text-white font-bold py-2 md:hover:scale-110 md:active:scale-75 duration-150 ease-out bg-primary rounded-md ml-auto"
+            >
               Submit
             </button>
           </div>

@@ -26,7 +26,7 @@ const Hero = ({ aboutRef }) => {
         <div className="flex space-x-4">
           <button
             onClick={() =>
-              aboutRef.current.scrollIntoView({
+              aboutRef?.current.scrollIntoView({
                 behavior: "smooth",
               })
             }
