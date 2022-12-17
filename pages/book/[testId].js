@@ -68,13 +68,13 @@ const Booking = () => {
 
   if (loading) return <Loading />;
 
-  // if (
-  //   !loading &&
-  //   !data.find((item) => item.testId === testId) &&
-  //   !profileData.find((item) => item.profileId === testId) &&
-  //   !packagesData.find((item) => item.packageId === testId)
-  // )
-  //   return <ErrorPage statusCode="404" />;
+  if (
+    !loading &&
+    !data.find((item) => item.testId === testId) &&
+    !profileData.find((item) => item.profileId === testId) &&
+    !packagesData.find((item) => item.packageId === testId)
+  )
+    return <ErrorPage statusCode="404" />;
 
   const addToSanity = () => {
     const toastId = toast.loading(<b>Booking is being Scheduled</b>);
