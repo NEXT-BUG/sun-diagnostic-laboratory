@@ -13,16 +13,15 @@ const Footer = () => {
   const router = useRouter();
   return (
     <div className="bg-black text-white pt-10">
-      <div className="text-white w-screen bg-black flex flex-col space-y-4 lg:space-y-0 text-left lg:flex-row justify-between px-20 items-center lg:items-stretch">
-        <div className="flex flex-col items-end">
+      <div className="text-white w-screen flex flex-col space-y-4 lg:space-y-0 text-left lg:flex-row justify-between px-20 items-center lg:items-center">
+        <div className="flex flex-col items-center">
           <Image
             onClick={() => router.push("/")}
-            className="md:hover:scale-105 md:active:scale-95 duration-100 ease-out md:cursor-pointer"
+            className="md:hover:scale-105 w-64 md:active:scale-95 duration-100 ease-out md:cursor-pointer"
             src={require("../assets/images/logo.png")}
             alt="logo"
           />
         </div>
-
         <div className="space-y-2">
           <h1 className="text-lg font-bold">Contact Us</h1>
           <div className="flex space-x-2">
@@ -35,12 +34,15 @@ const Footer = () => {
           <div className="flex space-x-2 items-center">
             <AiOutlineMail className="text-primary w-5 h-5" />
             <a
-              className="text-sm font-bold"
+              className="text-sm font-bold md:hover:text-primary"
               href="mailto:info@sundaignosticslaboratory.in"
             >
               info@sundaignosticslaboratory.in
             </a>
           </div>
+        </div>
+        <div className="space-y-2">
+          <h1 className="text-lg font-bold">Location</h1>
           <div className="flex space-x-2">
             <GoLocation className="text-primary w-5 h-5" />
             <div className="flex flex-col space-y-1">
