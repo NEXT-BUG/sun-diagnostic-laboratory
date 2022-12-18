@@ -1,10 +1,5 @@
 import Image from "next/image";
 import React from "react";
-import { SlChemistry } from "react-icons/sl";
-import { FaMicroscope, FaViruses, FaShieldVirus } from "react-icons/fa";
-import { BiTestTube } from "react-icons/bi";
-import { GiDna2, GiStethoscope } from "react-icons/gi";
-import { TbTestPipe } from "react-icons/tb";
 import { services } from "../../mock/services";
 
 const Services = () => {

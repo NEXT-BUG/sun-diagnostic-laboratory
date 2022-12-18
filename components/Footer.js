@@ -66,9 +66,23 @@ const Footer = () => {
       </div>
       <div className="w-[90%] rounded-md mx-auto h-1 bg-primary mt-5" />
       <div className="flex flex-col lg:flex-row text-center lg:text-left items-center space-y-2 lg:space-y-0 justify-evenly p-5">
-        <p className="text-lg font-bold">
-          © 2019, Sun Diagnostics Laboratory. All Rights Reserved. Reserved.
-        </p>
+        <div className="flex flex-col">
+          <p className="text-lg font-bold">
+            © 2019, Sun Diagnostics Laboratory. All Rights Reserved. Reserved.
+          </p>
+          <p className="text-white text-xs">
+            Developed By{" "}
+            <span
+              onClick={() =>
+                router.push("https://www.instagram.com/condottiereconsultancy/")
+              }
+              className="text-primary md:hover:text-[#00afa0] font-bold md:cursor-pointer"
+            >
+              Condottiere
+            </span>{" "}
+            Consultancy Services
+          </p>
+        </div>
         <div className="flex space-x-3">
           <AiOutlineInstagram
             onClick={() =>
