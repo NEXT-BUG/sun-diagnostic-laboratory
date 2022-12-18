@@ -66,7 +66,7 @@ const Footer = () => {
       </div>
       <div className="w-[90%] rounded-md mx-auto h-1 bg-primary mt-5" />
       <div className="flex flex-col lg:flex-row text-center lg:text-left items-center space-y-2 lg:space-y-0 justify-evenly p-5">
-        <div className="flex flex-col">
+        <div className="flex flex-col-reverse md:flex-col">
           <p className="text-lg font-bold">
             © 2019, Sun Diagnostics Laboratory. All Rights Reserved. Reserved.
           </p>
