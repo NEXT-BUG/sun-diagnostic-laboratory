@@ -13,7 +13,14 @@ const BestService = () => {
       </div>
       <div className="flex flex-col md:flex-row items-center md:items-stretch gap-10 justify-evenly mt-10 flex-wrap">
         {services.map((service, index) => {
-          return <ServiceCard {...service} key={index} />;
+          return (
+            <ServiceCard
+              title={service.title}
+              desc={service.desc}
+              image={<service.image className="text-black w-10 h-10" />}
+              key={index}
+            />
+          );
         })}
       </div>
     </div>

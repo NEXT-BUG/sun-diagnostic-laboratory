@@ -5,6 +5,7 @@ import { FaMicroscope, FaViruses, FaShieldVirus } from "react-icons/fa";
 import { BiTestTube } from "react-icons/bi";
 import { GiDna2, GiStethoscope } from "react-icons/gi";
 import { TbTestPipe } from "react-icons/tb";
+import { services } from "../../mock/services";
 
 const Services = () => {
   return (
@@ -20,46 +21,18 @@ const Services = () => {
         </p>
 
         <div className="flex flex-wrap justify-center gap-5 w-full">
-          <Cards
-            title="Clinical Biochemistry"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image={<SlChemistry className="w-20 text-primary h-20" />}
-          />
-          <Cards
-            title="Clinical Pathology"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image={<FaMicroscope className="w-20 text-primary h-20" />}
-          />
-          <Cards
-            title="Hematology"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image={<BiTestTube className="w-20 text-primary h-20" />}
-          />
-          <Cards
-            title="Molecular Diagnostics"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image={<GiDna2 className="w-20 text-primary h-20" />}
-          />
-          <Cards
-            title="Immunology"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image={<GiStethoscope className="w-20 text-primary h-20" />}
-          />
-          <Cards
-            title="Serology"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image={<TbTestPipe className="w-20 text-primary h-20" />}
-          />
-          <Cards
-            title="Histo & cytopathology"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image={<FaViruses className="w-20 text-primary h-20" />}
-          />
-          <Cards
-            title="Microbiology"
-            description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
-            image={<FaShieldVirus className="w-20 text-primary h-20" />}
-          />
+          {services?.map((item, index) => {
+            return (
+              <Cards
+                key={index}
+                title={item?.title}
+                description={item?.desc}
+                image={
+                  <item.image className="text-primary mx-auto w-20 h-20" />
+                }
+              />
+            );
+          })}
         </div>
       </div>
 

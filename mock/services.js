@@ -7,41 +7,41 @@ export const services = [
   {
     title: "Clinical Biochemistry",
     desc: "Clinical biochemistry services provides complete information about the normal and abnormal biochemical reactions...",
-    image: <SlChemistry className="text-black w-10 h-10" />,
+    image: ({ className }) => <SlChemistry className={className} />,
   },
   {
     title: "Clinical Pathology",
     desc: "The Clinical Pathology at Sun Diagnostics supports the diagnosis of disease using laboratory testing...",
-    image: <FaMicroscope className="text-black w-10 h-10" />,
+    image: ({ className }) => <FaMicroscope className={className} />,
   },
   {
     title: "Hematology",
     desc: "The Hematology Section consists of a highly trained and experienced hematology technologists with well....",
-    image: <BiTestTube className="text-black w-10 h-10" />,
+    image: ({ className }) => <BiTestTube className={className} />,
   },
   {
     title: "Molecular Diagnostics",
     desc: "Molecular Diagnostics is the method of profiling a patient’s biological composition at a genetic level...",
-    image: <GiDna2 className="text-black w-10 h-10" />,
+    image: ({ className }) => <GiDna2 className={className} />,
   },
   {
     title: "Immunology",
     desc: "Immunology services refers to the diagnostic tests and investigations undertaken for the identificatio....",
-    image: <GiStethoscope className="text-black w-10 h-10" />,
+    image: ({ className }) => <GiStethoscope className={className} />,
   },
   {
     title: "Serology",
     desc: "Serology is focused on tests that conclusively prove that there is a fungal, viral or protozoal...",
-    image: <TbTestPipe className="text-black w-10 h-10" />,
+    image: ({ className }) => <TbTestPipe className={className} />,
   },
   {
     title: "Histo & cytopathology",
     desc: "The department of surgical pathology includes the sections of Histopathology, Cytopathology...",
-    image: <FaViruses className="text-black w-10 h-10" />,
+    image: ({ className }) => <FaViruses className={className} />,
   },
   {
     title: "Microbiology",
     desc: "The department of Microbiology has the latest and standardized equipments including BacT-ALERT-3D...",
-    image: <FaShieldVirus className="text-black w-10 h-10" />,
+    image: ({ className }) => <FaShieldVirus className={className} />,
   },
 ];
