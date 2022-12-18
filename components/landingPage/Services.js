@@ -53,14 +53,14 @@ const Cards = ({ title, description, image }) => {
       <div className="translate-y-10 group-hover:translate-y-5 duration-200 ease-out">
         {image}
       </div>
-      <p className="text-white font-bold text-xl translate-y-10 group-hover:translate-y-5 duration-200 ease-out">
+      <p className="text-white text-center font-bold text-xl translate-y-10 group-hover:translate-y-5 duration-200 ease-out">
         {title}
       </p>
       <div className="h-1 group-hover:translate-y-5 duration-200 ease-out bg-primary w-full translate-y-10 rounded-full" />
-      <p className="group-hover:-translate-y-10 translate-y-10 group-hover:invisible duration-200 ease-out group-hover:text-[#313131] text-center font-bold text-white">
+      <p className="group-hover:-translate-y-1 translate-y-10 group-hover:invisible duration-200 ease-out group-hover:text-[#313131] text-center font-bold text-white">
         See More
       </p>
-      <p className=" text-[#313131] translate-y-10 invisible group-hover:visible group-hover:text-white group-hover:-translate-y-5 duration-200 ease-out  text-sm">
+      <p className=" text-[#313131] translate-y-5 invisible group-hover:visible group-hover:text-white group-hover:-translate-y-5 duration-200 ease-out  text-sm">
         {description}
       </p>
     </div>
