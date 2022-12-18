@@ -53,7 +53,7 @@ const Testimonials = () => {
 
 export default Testimonials;
 
-const Card = ({ quote, star, avatar, name, designation }) => {
+const Card = ({ quote, star, name, designation }) => {
   return (
     <div className="bg-black relative border-2 border-primary rounded-sm p-5 w-64 space-y-5 flex flex-col text-center items-center">
       <Image alt="" src={require("../../assets/images/quote.png")} />

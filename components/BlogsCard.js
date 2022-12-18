@@ -9,8 +9,8 @@ const BlogsCard = ({ image, title, desc }) => {
         src={image}
       />
       <div className="p-5 space-y-1">
-        <h1 className="font-bold text-2xl">{title}</h1>
-        <p className="text-sm">{desc}</p>
+        <h1 className="font-bold text-2xl text-black">{title}</h1>
+        <p className="text-sm text-black">{desc}</p>
       </div>
     </div>
   );
