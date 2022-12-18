@@ -49,14 +49,18 @@ export default Services;
 
 const Cards = ({ title, description, image }) => {
   return (
-    <div className="md:cursor-pointer bg-[#313131] duration-700 ease-out group shadow-lg px-5 hover:pb-5 w-[16rem] z-10 space-y-5 rounded-sm">
-      <div className="translate-y-10">{image}</div>
-      <p className="text-white font-bold text-xl translate-y-10">{title}</p>
-      <div className="h-1 bg-primary w-full translate-y-10 rounded-full" />
+    <div className="md:cursor-pointer bg-[#313131] duration-700 ease-out group shadow-lg px-5 w-[16rem] z-10 space-y-5 rounded-sm">
+      <div className="translate-y-10 group-hover:translate-y-5 duration-200 ease-out">
+        {image}
+      </div>
+      <p className="text-white font-bold text-xl translate-y-10 group-hover:translate-y-5 duration-200 ease-out">
+        {title}
+      </p>
+      <div className="h-1 group-hover:translate-y-5 duration-200 ease-out bg-primary w-full translate-y-10 rounded-full" />
       <p className="group-hover:-translate-y-10 translate-y-10 group-hover:invisible duration-200 ease-out group-hover:text-[#313131] text-center font-bold text-white">
         See More
       </p>
-      <p className=" text-[#313131] translate-y-10 invisible group-hover:visible group-hover:text-white group-hover:translate-y-0 duration-200 ease-out  text-sm">
+      <p className=" text-[#313131] translate-y-10 invisible group-hover:visible group-hover:text-white group-hover:-translate-y-5 duration-200 ease-out  text-sm">
         {description}
       </p>
     </div>
