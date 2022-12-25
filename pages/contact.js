@@ -76,7 +76,7 @@ const Contact = () => {
           </p>
         </div>
         <div className="flex flex-col md:flex-row w-full lg:w-2/3 lg:mx-auto bg-white mt-20 p-2 rounded-lg shadow-sm">
-          <div className="bg-primary w-full text-left md:w-64 lg:w-[30rem] p-10 h-96 md:h-[30rem] rounded-lg flex flex-col justify-between">
+          <div className="bg-primary w-full text-left md:w-[30rem] p-10 h-[35rem] rounded-lg flex flex-col justify-between">
             <div className="space-y-2">
               <h1 className="text-xl font-bold">Contact Information</h1>
               <p className="text-sm font-light">
@@ -113,6 +113,14 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.683634821299!2d79.9866736!3d14.445386899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c8cb545720189%3A0xebfa15e158d3b7d0!2sSun%20Diagnostics%20Laboratory!5e0!3m2!1sen!2sin!4v1671978112141!5m2!1sen!2sin"
+                style={{ border: 1 }}
+                className="rounded-lg mt-10 shadow-lg"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
             <div className="flex space-x-3">
               <div className="bg-black p-2 rounded-full md:active:scale-50 md:hover:scale-105 md:cursor-pointer duration-300 ease-out">
@@ -127,6 +135,9 @@ const Contact = () => {
             </div>
           </div>
           <form className="flex flex-col mt-5 lg:mt-0 space-y-5 items-center justify-center p-3 w-full">
+            <p className="text-xl font-bold">
+              Give Information, we will Contact you soon! 😉
+            </p>
             <div className="flex justify-evenly w-full space-x-3 lg:space-x-0">
               <Input
                 onChange={(e) =>
