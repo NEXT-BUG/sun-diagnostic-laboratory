@@ -3,7 +3,9 @@ import React from "react";
 
 const Hero = ({ title, description, catalogRef }) => {
   return (
-    <div className="w-screen h-full flex flex-col py-32">
+    <div>
+      <div className="w-100/10 mx-auto relative   bg-[#00afa0] h-1 rounded-lg" />
+      <div className="w-screen h-full flex flex-col py-32">
       <div className="flex space-y-10 md:space-y-0 w-2/3 mx-auto flex-col-reverse py-20 md:py-0 md:flex-row items-center justify-between md:space-x-10">
         <div className="space-y-10 text-center md:text-left">
           <p className="text-primary font-bold">The Solar For Cure</p>
@@ -34,6 +36,7 @@ const Hero = ({ title, description, catalogRef }) => {
           className="w-96 h-96"
           src={require("../../assets/images/hero-img-2.png")}
         />
+      </div>
       </div>
     </div>
   );

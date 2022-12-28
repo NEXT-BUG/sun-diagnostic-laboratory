@@ -73,6 +73,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <div className="w-100/10 mx-auto relative mb-6 top-10 bg-[#00afa0] h-1 rounded-lg" />
     </div>
   );
 };

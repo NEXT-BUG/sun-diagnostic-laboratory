@@ -32,7 +32,7 @@ const mockTestimonials = [
 
 const Testimonials = () => {
   return (
-    <div className="bg-black w-screen h-full lg:h-screen pb-20 lg:pb-32 relative pt-10">
+    <div className="bg-[#374957] w-screen h-full lg:h-screen pb-20 lg:pb-32 relative pt-10">
       <div className="w-[80%] mx-auto space-y-5 flex flex-col items-center lg:items-start">
         <div className="flex items-center space-x-5 w-full text-center justify-center lg:justify-start">
           <div className="w-[40%] lg:w-[8%] h-1 bg-primary rounded-md" />
@@ -55,7 +55,7 @@ export default Testimonials;
 
 const Card = ({ quote, star, name, designation }) => {
   return (
-    <div className="bg-black relative border-2 border-primary rounded-sm p-5 w-64 space-y-5 flex flex-col text-center items-center">
+    <div className="bg-[#374957] relative border-2 border-primary rounded-sm p-5 w-64 space-y-5 flex flex-col text-center items-center">
       <Image alt="" src={require("../../assets/images/quote.png")} />
       <p className="text-white">{quote}</p>
       <div className="flex space-x-4 pb-4">

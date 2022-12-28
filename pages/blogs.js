@@ -29,6 +29,7 @@ const Blogs = () => {
           <BlogsCard {...blog} key={index} />
         ))}
       </div>
+      <div className="w-100/10 mx-auto relative  bg-[#00afa0] h-1 rounded-lg" />
     </div>
   );
 };

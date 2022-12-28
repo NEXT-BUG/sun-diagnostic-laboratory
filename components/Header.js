@@ -77,11 +77,10 @@ const Header = ({ ref }) => {
   return (
     <div
       ref={ref}
-      className="w-screen z-50 bg-black px-5 md:px-10 flex justify-between items-center"
-    >
-      <div className="bg-black">
+      className="w-screen z-50 bg-white px-5 md:px-10 flex justify-between items-center">
+      <div className="bg-white">
         <Image
-          src={require("../assets/images/logo.png")}
+          src={require("../assets/images/sun-logo.png")}
           className="w-64 cursor-pointer md:hover:scale-110 md:active:scale-90 duration-150 ease-out"
           onClick={() => router.push("/")}
           loading="lazy"
@@ -90,7 +89,7 @@ const Header = ({ ref }) => {
       </div>
       <div className="lg:hidden py-5">
         <IconButton onClick={() => setMenuState(true)}>
-          <HiMenuAlt3 className="text-[#00DCC9] w-10 h-10 md:cursor-pointer" />
+          <HiMenuAlt3 className="text-primary w-10 h-10 md:cursor-pointer" />
         </IconButton>
         <SwipeableDrawer
           anchor="left"
@@ -117,7 +116,7 @@ const Header = ({ ref }) => {
           </List>
         </SwipeableDrawer>
       </div>
-      <div className="hidden lg:flex py-5 space-x-10 items-center text-white">
+      <div className="hidden lg:flex py-5 space-x-10 items-center text-secondary">
         {routes.map((route, index) => {
           if (route.name == "Home") return;
           return (

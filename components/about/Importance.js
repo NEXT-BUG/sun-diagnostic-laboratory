@@ -2,8 +2,8 @@ import React from "react";
 
 const Importance = () => {
   return (
-    <div className="w-screen min-h-screen text-center p-10 lg:p-20 space-y-3 bg-black text-white font-ubuntu">
-      <h1 className="text-secondary font-bold text-4xl">
+    <div className="w-screen min-h-screen text-center p-10 lg:p-20 space-y-3 bg-[#374957] text-white font-ubuntu">
+      <h1 className="text-[#4fbbb7] font-bold text-4xl">
         Why are these beliefs important to us?
       </h1>
       <p className="text-xl lg:w-2/3 mx-auto">
@@ -13,9 +13,9 @@ const Importance = () => {
       </p>
       <div className="flex flex-col lg:flex-row text-left pt-20 space-y-10 lg:space-y-0 lg:space-x-5 items-start">
         <div className="flex space-x-4">
-          <p className="text-6xl font-bold text-secondary">1</p>
+          <p className="text-6xl font-bold text-[#4fbbb7]">1</p>
           <div className="flex flex-col space-y-2">
-            <p className="text-3xl font-bold text-secondary">Precision</p>
+            <p className="text-3xl font-bold text-[#4fbbb7]">Precision</p>
             <p className="text-sm">
               For us, Precision is not just a commitment but a constant pursuit.
               In our business, random errors in reporting or from machines can
@@ -30,9 +30,9 @@ const Importance = () => {
         </div>
         {/*  */}
         <div className="flex space-x-4">
-          <p className="text-6xl font-bold text-secondary">2</p>
+          <p className="text-6xl font-bold text-[#4fbbb7]">2</p>
           <div className="flex flex-col space-y-2">
-            <p className="text-3xl font-bold text-secondary">Excellence</p>
+            <p className="text-3xl font-bold text-[#4fbbb7]">Excellence</p>
             <p className="text-sm">
               To be good enough, is not our aim. It is to be excellent.
               Continuously Excellent. To always be in a pursuit of continuous
@@ -45,9 +45,10 @@ const Importance = () => {
         </div>
         {/*  */}
         <div className="flex space-x-4">
-          <p className="text-6xl font-bold text-secondary">3</p>
+          <p className="text-6xl font-bold text-[#4fbbb7]">3</p>
           <div className="flex flex-col space-y-2">
-            <p className="text-3xl font-bold text-secondary">Accuracy</p>
+            <p className="text-3xl font-bold text-[#4fbbb7]
+            ">Accuracy</p>
             <p className="text-sm">
               When a patient walks in for a medical test, she has a million
               anxious thoughts racing through her mind. It makes you feel

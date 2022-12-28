@@ -7,8 +7,7 @@ const BestService = () => {
       <div className="text-secondary text-center space-y-2">
         <h1 className="font-bold text-3xl">We Provide The Best Services</h1>
         <p className="font-light text-sm">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc odio in
-          et, lectus sit lorem id integer.
+        The services includes
         </p>
       </div>
       <div className="flex flex-col md:flex-row items-center md:items-stretch gap-10 justify-evenly mt-10 flex-wrap">
@@ -23,7 +22,9 @@ const BestService = () => {
           );
         })}
       </div>
+      <div className="w-100/10 mx-auto relative top-20 bg-[#00afa0] h-1 rounded-lg" />
     </div>
+    
   );
 };
 

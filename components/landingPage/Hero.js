@@ -5,14 +5,17 @@ import { SlMouse } from "react-icons/sl";
 const Hero = () => {
   const router = useRouter();
   return (
-    <div className="h-full w-screen hero-bg bg-black">
+    <div>
+      <div className="w-100/10 mx-auto relative   bg-[#00afa0] h-1 rounded-lg" />
+      <div className="h-full w-screen hero-bg bg-black">
+      
       <div className="pb-10 w-2/3 mx-auto space-y-10 flex flex-col items-center lg:items-start">
-        <h1 className="mt-5 text-white text-center lg:text-left text-6xl md:text-5xl font-bold">
+        <h1 className="mt-5 text-[#374957] text-center lg:text-left text-6xl md:text-5xl font-bold">
           Fully Automated <br /> Laboratory
         </h1>
         <button
           onClick={() => router.push("/about")}
-          className="border border-primary rounded-sm md:hover:scale-105 font-bold md:active:scale-90 duration-150 ease-out text-white py-4 px-6"
+          className="border border-primary rounded-sm md:hover:scale-105 font-bold md:active:scale-90 duration-150 ease-out text-black py-4 px-6"
         >
           View More
         </button>
@@ -37,6 +40,7 @@ const Hero = () => {
       </div>
       <SlMouse className="text-primary h-10 w-full hidden lg:block pb-4 animate-pulse" />
     </div>
+    </div>
   );
 };
 
@@ -44,7 +48,7 @@ export default Hero;
 
 const Cards = ({ title, image, description }) => {
   return (
-    <div className="bg-[#313131] w-64 p-5 space-y-3 rounded-sm border border-primary shadow-xl">
+    <div className="bg-[#374957] w-64 p-5 space-y-3 rounded-sm border border-primary shadow-xl">
       <div className="w-10 h-10">
         <Image alt="" src={require(`../../assets/images/${image}`)} />
       </div>

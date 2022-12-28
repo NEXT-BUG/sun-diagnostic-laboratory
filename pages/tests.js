@@ -19,6 +19,7 @@ const Tests = () => {
 
   return (
     <div className="min-h-screen w-screen">
+      
       <Hero title="Tests Available" catalogRef={catalogRef} />
 
       <Catalog searchQuery={searchQuery} catalogRef={catalogRef} />

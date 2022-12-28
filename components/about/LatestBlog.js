@@ -5,7 +5,8 @@ import BlogsCard from "../BlogsCard";
 
 const LatestBlog = () => {
   return (
-    <div className="w-screen min-h-screen font-ubuntu">
+    <div>
+      <div className="w-screen min-h-screen font-ubuntu">
       <div className="p-10 lg:p-20 text-center space-y-5">
         <h1 className="text-secondary font-bold text-4xl">
           Our latest blog posts
@@ -21,6 +22,8 @@ const LatestBlog = () => {
           if (index < 3) return <BlogsCard key={index} {...blog} />;
         })}
       </div>
+      </div>
+      
     </div>
   );
 };

@@ -7,18 +7,19 @@ const MedicalServices = ({ viewMoreRef }) => {
   return (
     <div
       ref={viewMoreRef}
-      className="w-screen min-h-screen bg-gradient-to-b from-primary to-black flex justify-center flex-col"
+      className="w-screen min-h-screen bg-secondary flex justify-center flex-col"
     >
-      <div className="flex flex-col-reverse my-10 lg:flex-row justify-center items-center lg:items-start w-2/3 mx-auto text-white font-ubuntu">
-        <div className="flex flex-col text-center lg:text-left justify-center items-center lg:items-start space-y-5">
-          <h1 className="text-2xl mt-5 lg:text-5xl text-shadow-sm font-bold">
-            Affordable Diagnostic <br />
-            Services{" "}
+      <div className="flex flex-col-reverse my-10 lg:flex-row justify-center items-center lg:items-start w-5/5 mx-auto text-white font-ubuntu">
+        <div className="flex flex-col text-center lg:text-left justify-center items-center lg:items-start space-y-2">
+          <h1 className="text-5xl mt-5 lg:text-5xl text-shadow-sm font-bold">
+          Sun Diagnostics <br/>Laboratory{" "}
           </h1>
-          <p className="lg:w-2/3 text-sm">
-            You shouldn't have to compromise on your health or the quality of
-            your care. Our diagnostic services are affordable and can help you
-            get back on track with your treatment plan.
+          <p className="lg:w-2/3 text-lg">
+          Salient features of Labgenius diagnostic services includes,<br />
+            1. Diagnosis – confirmation or rejection of clinical diagnosis<br />
+            2. Prognosis - information regarding the likely out of come of disease<br />
+            3. Monitoring - natural history or response to treatment<br />
+            4. Screening -detection of subclinical disease.
           </p>
           <button
             onClick={() => router.push("/packages")}
