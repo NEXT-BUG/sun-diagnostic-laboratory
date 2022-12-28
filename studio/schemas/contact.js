@@ -29,6 +29,12 @@ export default defineType({
       type: "string",
       readOnly: true,
     }),
+    defineField({
+      name: "read",
+      title: "Message Read",
+      type: "boolean",
+      initialValue: false,
+    }),
   ],
   preview: {
     select: {
