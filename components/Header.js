@@ -77,7 +77,8 @@ const Header = ({ ref }) => {
   return (
     <div
       ref={ref}
-      className="w-screen z-50 bg-white px-5 md:px-10 flex justify-between items-center">
+      className="w-screen z-50 bg-white px-5 md:px-10 flex justify-between items-center"
+    >
       <div className="bg-white">
         <Image
           src={require("../assets/images/sun-logo.png")}
@@ -118,7 +119,6 @@ const Header = ({ ref }) => {
       </div>
       <div className="hidden lg:flex py-5 space-x-10 items-center text-secondary">
         {routes.map((route, index) => {
-          if (route.name == "Home") return;
           return (
             <p
               key={index}

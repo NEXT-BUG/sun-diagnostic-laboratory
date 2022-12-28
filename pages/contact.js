@@ -117,9 +117,9 @@ const Contact = () => {
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.683634821299!2d79.9866736!3d14.445386899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4c8cb545720189%3A0xebfa15e158d3b7d0!2sSun%20Diagnostics%20Laboratory!5e0!3m2!1sen!2sin!4v1671978112141!5m2!1sen!2sin"
                 style={{ border: 1 }}
                 className="rounded-lg mt-10 shadow-lg"
-                allowfullscreen=""
+                allowFullScreen={true}
                 loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
+                referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
             <div className="flex space-x-3">
