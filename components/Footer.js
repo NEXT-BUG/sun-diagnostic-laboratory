@@ -12,13 +12,13 @@ import { GoLocation } from "react-icons/go";
 const Footer = () => {
   const router = useRouter();
   return (
-    <div className="bg-white text-black pt-10">
-      <div className="text-black w-screen flex flex-col space-y-4 lg:space-y-0 text-left lg:flex-row justify-between px-20 items-center lg:items-center">
+    <div className="bg-secondary text-white pt-10">
+      <div className="text-white w-screen flex flex-col space-y-4 lg:space-y-0 text-left lg:flex-row justify-between px-20 items-center lg:items-center">
         <div className="flex flex-col items-center">
           <Image
             onClick={() => router.push("/")}
             className="md:hover:scale-105 w-64 md:active:scale-95 duration-100 ease-out md:cursor-pointer"
-            src={require("../assets/images/sun-logo.png")}
+            src={require("../assets/images/logo.png")}
             alt="logo"
           />
         </div>
@@ -70,7 +70,7 @@ const Footer = () => {
           <p className="text-lg font-bold">
             © 2019, Sun Diagnostics Laboratory. All Rights Reserved. Reserved.
           </p>
-          <p className="text-black text-xs">
+          <p className="text-white text-xs">
             Developed By{" "}
             <span
               onClick={() =>

@@ -19,12 +19,12 @@ const About = () => {
             className="card-zoom-image opacity-80 bg-secondary"
             src={require("../../assets/images/precision.png")}
           />
-           <div class=" bg-gradient-to-t from-white via-black to-black " />
+          <div className=" bg-gradient-to-t from-white via-black to-black " />
           <h1 className="text-shadow-sm card-zoom-text text-gray-200 font-bold text-2xl bottom-20">
             Precision
           </h1>
           <p className="text-shadow-sm card-zoom-text text-gray-200 font-semibold text-lg bottom-4">
-          Precision is not just a commitment but a constant pursuit. 
+            Precision is not just a commitment but a constant pursuit.
           </p>
         </div>
         <div className="flex flex-col md:items-stretch items-center justify-between space-y-5 w-[20rem] lg:w-[35rem]">
@@ -34,12 +34,12 @@ const About = () => {
               className="card-zoom-image opacity-80 bg-secondary"
               src={require("../../assets/images/excellence.png")}
             />
-            <div class=" bg-gradient-to-t from-white via-black to-black " />
+            <div className=" bg-gradient-to-t from-white via-black to-black " />
             <h1 className="card-zoom-text text-shadow-sm card-zoom-text text-gray-200 font-bold text-2xl bottom-10">
               Excellence
             </h1>
             <p className="card-zoom-text text-shadow-sm card-zoom-text text-gray-200 font-semibold text-lg bottom-4">
-            We believe in chasing an ever - higher standard at all times
+              We believe in chasing an ever - higher standard at all times
             </p>
           </div>
           <div className="card-zoom border-2 w-[20rem] md:w-full border-primary h-64">
@@ -48,12 +48,13 @@ const About = () => {
               className="card-zoom-image opacity-80 bg-secondary"
               src={require("../../assets/images/accuracy.png")}
             />
-            <div class=" bg-gradient-to-t from-white via-black to-black " />
+            <div className=" bg-gradient-to-t from-white via-black to-black " />
             <h1 className="card-zoom-text text-shadow-sm card-zoom-text text-gray-200 font-bold text-2xl bottom-20">
               Accuracy
             </h1>
             <p className="card-zoom-text text-shadow-sm card-zoom-text text-gray-200 font-semibold text-lg bottom-4">
-            providing highly accurate test results from our end. In fact, it is our duty.
+              providing highly accurate test results from our end. In fact, it
+              is our duty.
             </p>
           </div>
         </div>

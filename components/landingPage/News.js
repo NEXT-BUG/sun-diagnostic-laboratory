@@ -9,9 +9,10 @@ const News = () => {
   return (
     <>
       <div className="bg-white w-screen pb-10 h-full lg:h-screen text-black flex flex-col items-center space-y-4">
-        <div className="w-[70%] h-1 rounded-lg mb-5 lg:mb-0 lg:w-1 lg:h-[13%] mt-10 bg-black mx-auto" />
-        <div className="lg:pb-5">
-          <h1 className="text-3xl text-black text-center font-bold ">Latest Blogs</h1>
+        <div className="lg:pb-5 pt-10">
+          <h1 className="text-3xl text-black text-center font-bold ">
+            Latest Blogs
+          </h1>
           <p className="text-sm font-semibold text-center text-black">
             Check Out Some Of Our Blogs
           </p>
@@ -23,13 +24,12 @@ const News = () => {
           ))}
         </div>
       </div>
-      <div className="w-screen h-32 lg:h-64 bg-[#374957] space-y-5 text-white text-center">
-        <div className="w-[70%] h-1 rounded-lg mb-5 lg:mb-0 lg:w-1 lg:h-[30%] bg-primary mx-auto" />
+      <div className="w-screen h-32 lg:h-full space-y-5 text-black pb-10 text-center">
         <div className="space-y-3">
-          <h1 className="text-3xl font-bold">Contact Us</h1>
+          <h1 className="text-3xl font-bold animate-bounce">Contact Us</h1>
           <button
             onClick={() => router.push("/contact")}
-            className="px-4 py-3 border border-primary rounded-sm font-bold md:hover:scale-110 md:active:scale-75 duration-300 ease-out"
+            className="px-4 py-3 border border-primary rounded-md font-bold md:hover:scale-110 md:active:scale-75 duration-300 ease-out"
           >
             Make Enquiry
           </button>

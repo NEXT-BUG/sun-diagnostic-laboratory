@@ -1,23 +1,22 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
-import { SlMouse } from "react-icons/sl";
 const Hero = () => {
   const router = useRouter();
   return (
     <div>
       <div className="w-100/10 mx-auto relative   bg-[#00afa0] h-1 rounded-lg" />
       <div className="h-full w-screen hero-bg bg-black">
-        <div className="pb-10 w-2/3 mx-auto space-y-10 flex flex-col items-center lg:items-start">
-          <h1 className="mt-5 text-[#374957] text-center lg:text-left text-6xl md:text-5xl font-bold">
+        <div className="pb-10 w-2/3 mx-auto space-y-20 flex flex-col items-center lg:items-start">
+          <h1 className="mt-10 text-[#374957] text-center lg:text-left text-6xl md:text-5xl font-bold">
             Fully Automated <br /> Laboratory
           </h1>
-          <button
+          {/* <button
             onClick={() => router.push("/about")}
-            className="border border-primary rounded-sm md:hover:scale-105 font-bold md:active:scale-90 duration-150 ease-out text-black py-4 px-6"
+            className="border border-primary bg-white md:hover:bg-gray-100 shadow-2xl rounded-lg md:hover:scale-105 font-bold md:active:scale-90 duration-150 ease-out text-black py-2 px-4"
           >
             View More
-          </button>
+          </button> */}
           <div className="flex flex-col lg:flex-row space-y-5 lg:space-y-0 justify-center w-full items-center lg:items-stretch lg:justify-between">
             <Cards
               title="Diagnostic Services"
@@ -37,7 +36,6 @@ const Hero = () => {
             />
           </div>
         </div>
-        <SlMouse className="text-primary h-10 w-full hidden lg:block pb-4 animate-pulse" />
       </div>
     </div>
   );
