@@ -59,21 +59,21 @@ const About = () => {
                 <p>» Precision and care is our way of center</p>
               </div>
             </div>
-            <div className="justify-center items-center space-y-3 flex flex-col w-80 lg:w-96 shadow-2xl rounded-sm bg-white p-7">
+            <div className="justify-center items-center space-y-3 flex flex-col w-80 lg:w-[26rem] shadow-2xl rounded-sm bg-white p-7">
               <p className="text-4xl text-center font-bold">Mission</p>
-              <div className="text-xs text-center flex flex-col items-start">
+              <div className="text-xs text-center lg:text-left flex flex-col items-start">
                 <p>
                   » To be the most admired diagnostic laboratory in south India
-                  <br />
-                  » To build confidence in the medical community <br />» To
-                  enhance customer access by increasing first time users
+                </p>
+                <p>» To build confidence in the medical community</p>
+                <p>
+                  » To enhance customer access by increasing first time users
                 </p>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="w-100/10 mx-auto relative mb-6 top-10 bg-[#00afa0] h-1 rounded-lg" />
     </div>
   );
 };

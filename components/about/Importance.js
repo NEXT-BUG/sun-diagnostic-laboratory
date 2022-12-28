@@ -2,7 +2,7 @@ import React from "react";
 
 const Importance = () => {
   return (
-    <div className="w-screen min-h-screen text-center p-10 lg:p-20 space-y-3 bg-[#374957] text-white font-ubuntu">
+    <div className="w-screen text-center p-10 lg:p-20 space-y-3 bg-[#374957] text-white font-ubuntu">
       <h1 className="text-[#4fbbb7] font-bold text-4xl">
         Why are these beliefs important to us?
       </h1>
@@ -47,8 +47,12 @@ const Importance = () => {
         <div className="flex space-x-4">
           <p className="text-6xl font-bold text-[#4fbbb7]">3</p>
           <div className="flex flex-col space-y-2">
-            <p className="text-3xl font-bold text-[#4fbbb7]
-            ">Accuracy</p>
+            <p
+              className="text-3xl font-bold text-[#4fbbb7]
+            "
+            >
+              Accuracy
+            </p>
             <p className="text-sm">
               When a patient walks in for a medical test, she has a million
               anxious thoughts racing through her mind. It makes you feel
