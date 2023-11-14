@@ -10,11 +10,11 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Toaster />
-      <Header />
-      <div className={!path.split("/").includes("studio") && "pt-32"}>
+      {path !== "/admin/[[...index]]" && <Header />}
+      <div className={!path.split("/").includes("admin") && "pt-32"}>
         <Component {...pageProps} />
       </div>
-      <Footer />
+      {path !== "/admin/[[...index]]" && <Footer />}
     </>
   );
 }
