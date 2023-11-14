@@ -4,7 +4,7 @@ import { visionTool } from "@sanity/vision";
 import { schemaTypes } from "./schemas";
 
 export default defineConfig({
-  basePath: "/studio",
+  basePath: "/admin",
   title: "sun-diagnostics-laboratory",
   name: "sun-diagnostics-laboratory",
 
