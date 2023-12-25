@@ -39,7 +39,7 @@ const Booking = () => {
     mobile: "",
     houseNumber: "",
     streetSociety: "",
-    city: "Chennai",
+    city: "",
     houseCollectionMobileNumber: "",
   });
 
@@ -120,7 +120,7 @@ const Booking = () => {
           mobile: "",
           houseNumber: "",
           streetSociety: "",
-          city: "Chennai",
+          city: "",
           houseCollectionMobileNumber: "",
         });
       })
@@ -134,22 +134,22 @@ const Booking = () => {
 
   return (
     <div className="w-screen min-h-screen">
-      <div className="p-3 pt-10 md:p-10 flex flex-col-reverse md:flex-row justify-between items-start font-ubuntu md:space-x-10">
+      <div className="flex flex-col-reverse items-start justify-between p-3 pt-10 md:p-10 md:flex-row font-ubuntu md:space-x-10">
         {packageObject ? null : profileObject ? (
           <ProfileSearchCatalog border shadow className="md:w-1/3" />
         ) : (
           <SearchCatalog border shadow className="md:w-1/3" />
         )}
         <div className="text-left md:w-2/3">
-          <p className="font-bold text-4xl">
+          <p className="text-4xl font-bold">
             {testObject?.testName ||
               profileObject?.profileName ||
               packageObject?.packageName}
           </p>
           <div className="mt-20">
-            <h1 className="font-bold text-2xl">Book Now</h1>
-            <div className="bg-primary h-1 w-full my-5 rounded-full" />
-            <div className="flex flex-col md:p-10 space-y-2">
+            <h1 className="text-2xl font-bold">Book Now</h1>
+            <div className="w-full h-1 my-5 rounded-full bg-primary" />
+            <div className="flex flex-col space-y-2 md:p-10">
               <div className="flex items-center justify-between">
                 <p className="font-bold">Salutation</p>
                 <RadioGroup
@@ -272,9 +272,9 @@ const Booking = () => {
             </div>
           </div>
           <div className="mt-10">
-            <h1 className="font-bold text-2xl">Home Collection</h1>
-            <div className="bg-primary h-1 w-full my-5 rounded-full" />
-            <div className="flex flex-col md:p-10 space-y-2">
+            <h1 className="text-2xl font-bold">Home Collection</h1>
+            <div className="w-full h-1 my-5 rounded-full bg-primary" />
+            <div className="flex flex-col space-y-2 md:p-10">
               <div className="flex items-center justify-between">
                 <p className="font-bold">House Number</p>
                 <Input
@@ -304,8 +304,11 @@ const Booking = () => {
                 <Input
                   sx={{ width: "15rem" }}
                   variant="standard"
-                  value="Chennai"
-                  disabled
+                  value={formData?.city}
+                  label="City"
+                  onChange={(e) =>
+                    setFormData({ ...formData, city: e.target.value })
+                  }
                 />
               </div>
               <div className="flex items-center justify-between">
@@ -332,7 +335,7 @@ const Booking = () => {
           <div className="flex justify-between m-5">
             <button
               onClick={addToSanity}
-              className="px-4 text-white font-bold py-2 md:hover:scale-110 md:active:scale-75 duration-150 ease-out bg-primary rounded-md ml-auto"
+              className="px-4 py-2 ml-auto font-bold text-white duration-150 ease-out rounded-md md:hover:scale-110 md:active:scale-75 bg-primary"
             >
               Submit
             </button>
